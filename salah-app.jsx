@@ -1,141 +1,34 @@
 import { useState, useRef, useCallback } from "react";
+import imagePng from "./image.png";
 
 // ============================================================
-// SVG SILHOUETTE PATHS - Proper human figure prayer positions
+// IMAGE ILLUSTRATION CONFIG
 // ============================================================
 
-const POSE_SVGS = {
-  STANDING: (
-    <g>
-      <ellipse cx="150" cy="38" rx="14" ry="16" fill="currentColor"/>
-      <rect x="136" y="24" width="28" height="6" rx="3" fill="currentColor"/>
-      <rect x="146" y="54" width="8" height="8" fill="currentColor"/>
-      <path d="M136,62 L164,62 L168,180 L132,180 Z" fill="currentColor" opacity="0.85"/>
-      <path d="M136,66 L126,66 L120,120 L128,122 L132,75 Z" fill="currentColor"/>
-      <path d="M164,66 L174,66 L180,120 L172,122 L168,75 Z" fill="currentColor"/>
-      <path d="M132,180 L128,196 L140,196 L142,180 Z" fill="currentColor"/>
-      <path d="M158,180 L160,196 L172,196 L168,180 Z" fill="currentColor"/>
-    </g>
-  ),
-  TAKBIR: (
-    <g>
-      <ellipse cx="150" cy="38" rx="14" ry="16" fill="currentColor"/>
-      <rect x="136" y="24" width="28" height="6" rx="3" fill="currentColor"/>
-      <rect x="146" y="54" width="8" height="8" fill="currentColor"/>
-      <path d="M136,62 L164,62 L168,180 L132,180 Z" fill="currentColor" opacity="0.85"/>
-      <path d="M136,66 L126,64 L118,42 L124,38 L132,56 L136,62 Z" fill="currentColor"/>
-      <path d="M164,66 L174,64 L182,42 L176,38 L168,56 L164,62 Z" fill="currentColor"/>
-      <path d="M116,36 L120,28 L126,32 L122,40 Z" fill="currentColor"/>
-      <path d="M184,36 L180,28 L174,32 L178,40 Z" fill="currentColor"/>
-      <path d="M132,180 L128,196 L140,196 L142,180 Z" fill="currentColor"/>
-      <path d="M158,180 L160,196 L172,196 L168,180 Z" fill="currentColor"/>
-    </g>
-  ),
-  HANDS_FOLDED: (
-    <g>
-      <ellipse cx="150" cy="38" rx="14" ry="16" fill="currentColor"/>
-      <rect x="136" y="24" width="28" height="6" rx="3" fill="currentColor"/>
-      <rect x="146" y="54" width="8" height="8" fill="currentColor"/>
-      <path d="M136,62 L164,62 L168,180 L132,180 Z" fill="currentColor" opacity="0.85"/>
-      <path d="M136,66 L128,68 L126,86 L134,100 L148,100 L148,92 L134,92 L132,78 L136,70 Z" fill="currentColor"/>
-      <path d="M164,66 L172,68 L174,86 L166,100 L152,100 L152,92 L166,92 L168,78 L164,70 Z" fill="currentColor"/>
-      <ellipse cx="150" cy="98" rx="12" ry="5" fill="currentColor"/>
-      <path d="M132,180 L128,196 L140,196 L142,180 Z" fill="currentColor"/>
-      <path d="M158,180 L160,196 L172,196 L168,180 Z" fill="currentColor"/>
-    </g>
-  ),
-  RUKU: (
-    <g>
-      <ellipse cx="98" cy="78" rx="14" ry="15" fill="currentColor"/>
-      <rect x="86" y="65" width="24" height="5" rx="2" fill="currentColor"/>
-      <path d="M112,72 L112,88 L170,96 L170,80 Z" fill="currentColor"/>
-      <path d="M120,88 L120,130 L156,130 L170,96 L170,80 L112,72 L112,88 Z" fill="currentColor" opacity="0.7"/>
-      <path d="M156,80 L156,96 L162,130 L170,130 L170,96 Z" fill="currentColor"/>
-      <path d="M164,80 L172,96 L178,130 L170,130 Z" fill="currentColor"/>
-      <path d="M166,96 L174,96 L178,180 L185,196 L175,196 L170,180 L164,180 L160,196 L150,196 L156,180 L158,96 Z" fill="currentColor"/>
-    </g>
-  ),
-  STANDING_FROM_RUKU: (
-    <g>
-      <ellipse cx="150" cy="38" rx="14" ry="16" fill="currentColor"/>
-      <rect x="136" y="24" width="28" height="6" rx="3" fill="currentColor"/>
-      <rect x="146" y="54" width="8" height="8" fill="currentColor"/>
-      <path d="M136,62 L164,62 L168,180 L132,180 Z" fill="currentColor" opacity="0.85"/>
-      <path d="M136,66 L126,66 L122,125 L130,126 L133,75 Z" fill="currentColor"/>
-      <path d="M164,66 L174,66 L178,125 L170,126 L167,75 Z" fill="currentColor"/>
-      <path d="M132,180 L128,196 L140,196 L142,180 Z" fill="currentColor"/>
-      <path d="M158,180 L160,196 L172,196 L168,180 Z" fill="currentColor"/>
-    </g>
-  ),
-  SUJOOD: (
-    <g>
-      <ellipse cx="80" cy="178" rx="14" ry="12" fill="currentColor"/>
-      <rect x="68" y="168" width="22" height="5" rx="2" fill="currentColor"/>
-      <path d="M94,172 Q130,120 170,148 L174,156 Q134,130 96,180 Z" fill="currentColor"/>
-      <path d="M100,175 Q130,135 168,150 L174,170 L180,188 L100,188 Z" fill="currentColor" opacity="0.7"/>
-      <path d="M90,174 L72,180 L60,188 L70,192 L80,186 L94,180 Z" fill="currentColor"/>
-      <path d="M168,152 L175,160 L180,188 L195,196 L185,196 L172,188 L165,160 Z" fill="currentColor"/>
-      <path d="M185,188 L200,188 L205,196 L185,196 Z" fill="currentColor"/>
-    </g>
-  ),
-  SITTING: (
-    <g>
-      <ellipse cx="130" cy="78" rx="14" ry="16" fill="currentColor"/>
-      <rect x="116" y="64" width="28" height="5" rx="2" fill="currentColor"/>
-      <path d="M120,94 L140,94 L142,155 L118,155 Z" fill="currentColor"/>
-      <path d="M116,94 L144,94 L148,165 L112,165 Z" fill="currentColor" opacity="0.7"/>
-      <path d="M118,100 L108,102 L104,140 L110,150 L116,140 L116,108 Z" fill="currentColor"/>
-      <path d="M142,100 L152,102 L156,140 L150,150 L144,140 L144,108 Z" fill="currentColor"/>
-      <path d="M112,155 L148,155 L155,170 L195,175 L200,188 L195,196 L105,196 L100,188 L108,175 Z" fill="currentColor"/>
-      <path d="M100,188 L95,196 L108,196 L105,188 Z" fill="currentColor"/>
-    </g>
-  ),
-  SALAM_RIGHT: (
-    <g>
-      <ellipse cx="138" cy="78" rx="14" ry="16" fill="currentColor"/>
-      <rect x="125" y="64" width="26" height="5" rx="2" fill="currentColor"/>
-      <path d="M158,72 L170,72 L166,68 M170,72 L166,76" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5"/>
-      <path d="M116,94 L144,94 L148,165 L112,165 Z" fill="currentColor" opacity="0.7"/>
-      <path d="M118,100 L108,102 L104,140 L110,150 L116,140 L116,108 Z" fill="currentColor"/>
-      <path d="M142,100 L152,102 L156,140 L150,150 L144,140 L144,108 Z" fill="currentColor"/>
-      <path d="M112,155 L148,155 L155,170 L195,175 L200,188 L195,196 L105,196 L100,188 L108,175 Z" fill="currentColor"/>
-      <path d="M100,188 L95,196 L108,196 L105,188 Z" fill="currentColor"/>
-    </g>
-  ),
-  SALAM_LEFT: (
-    <g>
-      <ellipse cx="122" cy="78" rx="14" ry="16" fill="currentColor"/>
-      <rect x="110" y="64" width="26" height="5" rx="2" fill="currentColor"/>
-      <path d="M106,72 L94,72 L98,68 M94,72 L98,76" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5"/>
-      <path d="M116,94 L144,94 L148,165 L112,165 Z" fill="currentColor" opacity="0.7"/>
-      <path d="M118,100 L108,102 L104,140 L110,150 L116,140 L116,108 Z" fill="currentColor"/>
-      <path d="M142,100 L152,102 L156,140 L150,150 L144,140 L144,108 Z" fill="currentColor"/>
-      <path d="M112,155 L148,155 L155,170 L195,175 L200,188 L195,196 L105,196 L100,188 L108,175 Z" fill="currentColor"/>
-      <path d="M100,188 L95,196 L108,196 L105,188 Z" fill="currentColor"/>
-    </g>
-  ),
+// If image.png is a sprite sheet, these coordinates map to each pose.
+// Defaulting to a 3x3 grid layout (0, 50%, 100%).
+const POSE_MAP = {
+  STANDING: { x: 0, y: 0 },
+  TAKBIR: { x: 1, y: 0 },
+  HANDS_FOLDED: { x: 2, y: 0 },
+  RUKU: { x: 0, y: 1 },
+  STANDING_FROM_RUKU: { x: 1, y: 1 },
+  SUJOOD: { x: 2, y: 1 },
+  SITTING: { x: 0, y: 2 },
+  SALAM_RIGHT: { x: 1, y: 2 },
+  SALAM_LEFT: { x: 2, y: 2 },
 };
 
-const PrayerMat = () => (
-  <g>
-    <rect x="55" y="196" width="190" height="6" rx="2" fill="#2A9D8F" opacity="0.3"/>
-    <rect x="65" y="197" width="170" height="4" rx="1" fill="#2A9D8F" opacity="0.15"/>
-  </g>
-);
-
 function PoseIllustration({ pose }) {
-  const svg = POSE_SVGS[pose] || POSE_SVGS.STANDING;
+  const pos = POSE_MAP[pose] || POSE_MAP.STANDING;
+
   return (
-    <svg viewBox="40 10 220 200" style={{ width: "100%", maxWidth: 240, height: "auto", color: "#D4C5A9" }}>
-      <defs>
-        <filter id="softglow">
-          <feGaussianBlur stdDeviation="1.5" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <g filter="url(#softglow)">{svg}</g>
-      <PrayerMat/>
-    </svg>
+    <div style={S.illustWrap}>
+      <div style={{
+        ...S.sprite,
+        backgroundPosition: `${pos.x * 50}% ${pos.y * 50}%`,
+      }} />
+    </div>
   );
 }
 
@@ -400,7 +293,7 @@ export default function SalahApp() {
         <h2 style={S.sTitle}>{s.title}</h2>
         <div style={S.illust}>
           <PoseIllustration pose={s.pose}/>
-          <div style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:1.5,marginTop:4,color:ac}}>
+          <div style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:1.5,marginTop:12,color:ac}}>
             {s.pose.replace(/_/g,' ')}
           </div>
         </div>
@@ -457,7 +350,9 @@ const S = {
   pFill:{height:"100%",borderRadius:2,transition:"width 0.35s ease"},
   cnt:{flex:1,overflowY:"auto",padding:"16px 18px",display:"flex",flexDirection:"column",gap:14},
   sTitle:{fontSize:19,fontWeight:700,color:"#FFF",margin:0,textAlign:"center"},
-  illust:{display:"flex",flexDirection:"column",alignItems:"center",padding:"8px 0",background:"radial-gradient(ellipse at center,rgba(212,165,116,0.04) 0%,transparent 70%)",borderRadius:16},
+  illust:{display:"flex",flexDirection:"column",alignItems:"center",padding:"16px 0",background:"radial-gradient(ellipse at center,rgba(212,165,116,0.04) 0%,transparent 70%)",borderRadius:16},
+  illustWrap:{width:200,height:200,overflow:"hidden",borderRadius:16,background:"rgba(255,255,255,0.03)",position:"relative",border:"1px solid rgba(255,255,255,0.08)"},
+  sprite:{position:"absolute",width:"300%",height:"300%",backgroundImage:`url(${imagePng})`,backgroundSize:"cover",backgroundRepeat:"no-repeat",transition:"background-position 0.3s ease"},
   iBox:{display:"flex",gap:10,alignItems:"flex-start",background:"rgba(42,157,143,0.06)",border:"1px solid rgba(42,157,143,0.12)",borderLeft:"3px solid #2A9D8F",borderRadius:"0 10px 10px 0",padding:"12px 14px"},
   iTxt:{margin:0,fontSize:13.5,lineHeight:1.65,color:"#B0BEC5"},
   tCard:{background:"rgba(255,255,255,0.025)",borderRadius:12,padding:"14px 16px",border:"1px solid rgba(255,255,255,0.05)"},
