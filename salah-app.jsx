@@ -1,33 +1,61 @@
 import { useState, useRef, useCallback } from "react";
-import imagePng from "./image.png";
 
 // ============================================================
 // IMAGE ILLUSTRATION CONFIG
 // ============================================================
 
-// If image.png is a sprite sheet, these coordinates map to each pose.
-// Defaulting to a 3x3 grid layout (0, 50%, 100%).
-const POSE_MAP = {
-  STANDING: { x: 0, y: 0 },
-  TAKBIR: { x: 1, y: 0 },
-  HANDS_FOLDED: { x: 2, y: 0 },
-  RUKU: { x: 0, y: 1 },
-  STANDING_FROM_RUKU: { x: 1, y: 1 },
-  SUJOOD: { x: 2, y: 1 },
-  SITTING: { x: 0, y: 2 },
-  SALAM_RIGHT: { x: 1, y: 2 },
-  SALAM_LEFT: { x: 2, y: 2 },
+import standingImg from "./images/standing.png";
+import takbirImg from "./images/takbir.png";
+import handsFoldedImg from "./images/hands folder.png";
+import rukuImg from "./images/ruku.png";
+import standingFromRukuImg from "./images/standing from ruku.png";
+import sujoodImg from "./images/sujood.png";
+import sittingImg from "./images/sitting.png";
+
+const POSE_IMAGES = {
+  STANDING: standingImg,
+  TAKBIR: takbirImg,
+  HANDS_FOLDED: handsFoldedImg,
+  RUKU: rukuImg,
+  STANDING_FROM_RUKU: standingFromRukuImg,
+  SUJOOD: sujoodImg,
+  SITTING: sittingImg,
+  SALAM_RIGHT: sittingImg, // Will be handled in component
+  SALAM_LEFT: sittingImg,  // Will be handled in component
 };
 
 function PoseIllustration({ pose }) {
-  const pos = POSE_MAP[pose] || POSE_MAP.STANDING;
+  const src = POSE_IMAGES[pose] || POSE_IMAGES.STANDING;
+  const isSalamLeft = pose === "SALAM_LEFT";
+  const isSalamRight = pose === "SALAM_RIGHT";
 
   return (
     <div style={S.illustWrap}>
-      <div style={{
-        ...S.sprite,
-        backgroundPosition: `${pos.x * 50}% ${pos.y * 50}%`,
-      }} />
+      <img
+        src={src}
+        alt={pose}
+        style={{
+          ...S.poseImg,
+          transform: isSalamLeft ? "scaleX(-1)" : "none",
+        }}
+      />
+      {(isSalamLeft || isSalamRight) && (
+        <div style={{
+          position: "absolute",
+          top: 12,
+          [isSalamRight ? "right" : "left"]: 12,
+          background: "rgba(42, 157, 143, 0.9)",
+          color: "white",
+          padding: "4px 10px",
+          borderRadius: 20,
+          fontSize: 10,
+          fontWeight: "bold",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+          letterSpacing: 0.5
+        }}>
+          {isSalamRight ? "TINGIN SA KANAN →" : "← TINGIN SA KALIWA"}
+        </div>
+      )}
     </div>
   );
 }
@@ -293,7 +321,7 @@ export default function SalahApp() {
         <h2 style={S.sTitle}>{s.title}</h2>
         <div style={S.illust}>
           <PoseIllustration pose={s.pose}/>
-          <div style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:1.5,marginTop:12,color:ac}}>
+          <div style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:1.5,marginTop:12,color:ac,textAlign:"center"}}>
             {s.pose.replace(/_/g,' ')}
           </div>
         </div>
@@ -351,8 +379,8 @@ const S = {
   cnt:{flex:1,overflowY:"auto",padding:"16px 18px",display:"flex",flexDirection:"column",gap:14},
   sTitle:{fontSize:19,fontWeight:700,color:"#FFF",margin:0,textAlign:"center"},
   illust:{display:"flex",flexDirection:"column",alignItems:"center",padding:"16px 0",background:"radial-gradient(ellipse at center,rgba(212,165,116,0.04) 0%,transparent 70%)",borderRadius:16},
-  illustWrap:{width:200,height:200,overflow:"hidden",borderRadius:16,background:"rgba(255,255,255,0.03)",position:"relative",border:"1px solid rgba(255,255,255,0.08)"},
-  sprite:{position:"absolute",width:"300%",height:"300%",backgroundImage:`url(${imagePng})`,backgroundSize:"cover",backgroundRepeat:"no-repeat",transition:"background-position 0.3s ease"},
+  illustWrap:{width:"100%",maxWidth:300,aspectRatio:"1/1",borderRadius:24,background:"rgba(255,255,255,0.03)",position:"relative",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",overflow:"hidden",padding:20,boxSizing:"border-box"},
+  poseImg:{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",transition:"transform 0.3s ease"},
   iBox:{display:"flex",gap:10,alignItems:"flex-start",background:"rgba(42,157,143,0.06)",border:"1px solid rgba(42,157,143,0.12)",borderLeft:"3px solid #2A9D8F",borderRadius:"0 10px 10px 0",padding:"12px 14px"},
   iTxt:{margin:0,fontSize:13.5,lineHeight:1.65,color:"#B0BEC5"},
   tCard:{background:"rgba(255,255,255,0.025)",borderRadius:12,padding:"14px 16px",border:"1px solid rgba(255,255,255,0.05)"},
