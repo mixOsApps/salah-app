@@ -6,11 +6,13 @@ import { useState, useRef, useCallback } from "react";
 
 import standingImg from "./images/standing.png";
 import takbirImg from "./images/takbir.png";
-import handsFoldedImg from "./images/hands folder.png";
+import handsFoldedImg from "./images/hands folded.png";
 import rukuImg from "./images/ruku.png";
 import standingFromRukuImg from "./images/standing from ruku.png";
 import sujoodImg from "./images/sujood.png";
 import sittingImg from "./images/sitting.png";
+import salamLeftImg from "./images/salam left.png";
+import salamRightImg from "./images/salam right.png";
 
 const POSE_IMAGES = {
   STANDING: standingImg,
@@ -20,8 +22,8 @@ const POSE_IMAGES = {
   STANDING_FROM_RUKU: standingFromRukuImg,
   SUJOOD: sujoodImg,
   SITTING: sittingImg,
-  SALAM_RIGHT: sittingImg, // Will be handled in component
-  SALAM_LEFT: sittingImg,  // Will be handled in component
+  SALAM_RIGHT: salamRightImg,
+  SALAM_LEFT: salamLeftImg,
 };
 
 function PoseIllustration({ pose }) {
@@ -34,10 +36,7 @@ function PoseIllustration({ pose }) {
       <img
         src={src}
         alt={pose}
-        style={{
-          ...S.poseImg,
-          transform: isSalamLeft ? "scaleX(-1)" : "none",
-        }}
+        style={S.poseImg}
       />
       {(isSalamLeft || isSalamRight) && (
         <div style={{
