@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 // ============================================================
 // IMAGE ILLUSTRATION CONFIG
@@ -90,7 +90,7 @@ const alFatiha = () => ({
 const additionalSurah = () => ({
   title: "Magbasa ng Surah", pose: "HANDS_FOLDED",
   arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ\nاللَّهُ الصَّمَدُ\nلَمْ يَلِدْ وَلَمْ يُولَدْ\nوَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
-  transliteration: "Qul huwallaahu ahad\nAllaahus-samad\nLam yalid wa lang yoolad\nWa lam yakun lahoo kufuwan ahad",
+  transliteration: "Qul huwallaahu ahad\nAllaahus-samad\nLam yalid wa lam yoolad\nWa lam yakun lahoo kufuwan ahad",
   tagalog: "Sabihin: Siya ang Allah, ang Nag-iisa\nAng Allah ang Sandigan\nHindi Siya nagkaanak at hindi Siya ipinanganak\nAt walang katulad Niya kahit isa",
   instruction: "Magbasa ng kahit anong surah. Halimbawa: Suratul Ikhlas (Al-Ikhlas 112).",
 });
@@ -152,7 +152,7 @@ const takbirToTashahhud = () => ({
 });
 const tashahhud = () => ({
   title: "Tashahhud (At-Tahiyyat)", pose: "SITTING",
-  arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَاوَاتُ وَالطَّيِّبَاتُ\nالسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ\nالسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ\nوَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+  arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَاوَاتُ وَالطَّيِّبَاتُ\nالسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ\nالسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ\nوَأَشْهَدُ أَنْ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
   transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaat\nAs-salaamu 'alayka ayyuhan-nabiyyu wa rahmatullaahi wa barakaatuh\nAs-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen\nAsh-hadu an laa ilaaha illallaah\nWa ash-hadu anna Muhammadan 'abduhu wa rasooluh",
   tagalog: "Ang lahat ng pagbati, panalangin at kabutihan ay para sa Allah\nKapayapaan sa iyo, O Propeta, at ang awa at pagpapala ng Allah\nKapayapaan sa amin at sa lahat ng mabubuting lingkod ng Allah\nAko ay sumasaksi na walang diyos kundi ang Allah\nAt ako ay sumasaksi na si Muhammad ay Kanyang alipin at Sugo",
   instruction: "Umupo at basahin ang Tashahhud. Ituro ang hintuturo (shahadah finger) sa 'Ash-hadu'.",
@@ -368,10 +368,14 @@ export default function SalahApp() {
   const total = prayer ? prayer.steps.length : 0;
   const pct = total > 0 ? ((step+1)/total)*100 : 0;
 
+  useEffect(() => {
+    if (ref.current) ref.current.scrollTop = 0;
+    window.scrollTo(0, 0);
+  }, [step, sel]);
+
   const go = useCallback((i) => {
     if(i<0||i>=total) return;
     setStep(i);
-    if(ref.current) ref.current.scrollTop=0;
   },[total]);
 
   if(!sel) {
