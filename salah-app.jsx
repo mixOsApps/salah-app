@@ -159,9 +159,9 @@ const tashahhud = () => ({
 });
 const salawat = () => ({
   title: "Salawat (Durood Ibrahim)", pose: "SITTING",
-  arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ",
-  transliteration: "Allaahumma salli 'alaa Muhammad wa 'alaa aali Muhammad\nKamaa sallayta 'alaa Ibraaheem wa 'alaa aali Ibraaheem\nInnaka hameedun majeed",
-  tagalog: "O Allah, pagpalain Mo si Muhammad at ang pamilya ni Muhammad\nTulad ng pagpapala Mo kay Ibrahim at sa pamilya ni Ibrahim\nKatotohanan, Ikaw ay Kapuri-puri at Maluwalhati",
+  arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ\n\nاللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ",
+  transliteration: "Allaahumma salli 'alaa Muhammad wa 'alaa aali Muhammad\nKamaa sallayta 'alaa Ibraaheem wa 'alaa aali Ibraaheem\nInnaka hameedun majeed\n\nAllaahumma baarik 'alaa Muhammad wa 'alaa aali Muhammad\nKamaa baarakta 'alaa Ibraaheem wa 'alaa aali Ibraaheem\nInnaka hameedun majeed",
+  tagalog: "O Allah, pagpalain Mo si Muhammad at ang pamilya ni Muhammad\nTulad ng pagpapala Mo kay Ibrahim at sa pamilya ni Ibrahim\nKatotohanan, Ikaw ay Kapuri-puri at Maluwalhati\n\nO Allah, igawad Mo ang Iyong pagpapala kay Muhammad at sa pamilya ni Muhammad\nTulad ng paggawad Mo ng pagpapala kay Ibrahim at sa pamilya ni Ibrahim\nKatotohanan, Ikaw ay Kapuri-puri at Maluwalhati",
   instruction: "Basahin ang Salawat/Durood Ibrahim pagkatapos ng Tashahhud sa huling raka'at.",
 });
 const salamRight = () => ({
