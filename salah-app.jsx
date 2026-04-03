@@ -73,6 +73,13 @@ const takbiratulIhram = () => ({
   arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
   instruction: "Itaas ang dalawang kamay hanggang sa tagiliran ng tenga at sabihin ang Takbir.",
 });
+const openingDua = () => ({
+  title: "Dua al-Istiftah & Ta'awwudh", pose: "HANDS_FOLDED",
+  arabic: "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلَهَ غَيْرُكَ\n\nأَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+  transliteration: "Subhaanaka Allaahumma wa bihamdika, wa tabaarakasmuka wa ta'aalaa jadduka, wa laa ilaaha ghayruka\n\nA'oozu billaahi minash-shaytaanir-rajeem",
+  tagalog: "Luwalhati sa Iyo, O Allah, at ang papuri ay sa Iyo, at mapagpala ang Iyong Ngalan, at Kataas-taasan ang Iyong Kadakilaan, at walang ibang diyos maliban sa Iyo.\n\nAko ay nagpapatulong sa Allah laban sa Shaitan, ang isinumpa.",
+  instruction: "Basahin ito nang tahimik pagkatapos ng Takbiratul Ihram at bago ang Al-Fatiha.",
+});
 const alFatiha = () => ({
   title: "Suratul Al-Fatiha", pose: "HANDS_FOLDED",
   arabic: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ\nالرَّحْمَنِ الرَّحِيمِ\nمَالِكِ يَوْمِ الدِّينِ\nإِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ\nاهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ\nصِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ\nغَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
@@ -86,6 +93,11 @@ const additionalSurah = () => ({
   transliteration: "Qul huwallaahu ahad\nAllaahus-samad\nLam yalid wa lam yoolad\nWa lam yakun lahoo kufuwan ahad",
   tagalog: "Sabihin: Siya ang Allah, ang Nag-iisa\nAng Allah ang Sandigan\nHindi Siya nagkaanak at hindi Siya ipinanganak\nAt walang katulad Niya kahit isa",
   instruction: "Magbasa ng kahit anong surah. Halimbawa: Suratul Ikhlas (Al-Ikhlas 112).",
+});
+const takbirToRuku = () => ({
+  title: "Takbir (Pagyuko)", pose: "TAKBIR",
+  arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
+  instruction: "Sabihin ang 'Allaahu Akbar' bago o habang yumuyuko para sa Ruku'.",
 });
 const ruku = () => ({
   title: "Ruku' (Pagyuko)", pose: "RUKU",
@@ -163,10 +175,10 @@ const PRAYERS = {
     name: "Fajr (Subh)", rakatCount: 2, tagalog: "Dasal ng Madaling-Araw",
     icon: "🌅", description: "2 Raka'at — Fard", color: "#F4845F",
     steps: [
-      niyyah("Fajr",2), takbiratulIhram(),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      niyyah("Fajr",2), takbiratulIhram(), openingDua(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(2),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashahhud(), salawat(), salamRight(), salamLeft(),
     ],
   },
@@ -174,15 +186,15 @@ const PRAYERS = {
     name: "Dhuhr", rakatCount: 4, tagalog: "Dasal ng Tanghali",
     icon: "☀️", description: "4 Raka'at — Fard", color: "#F9C74F",
     steps: [
-      niyyah("Dhuhr",4), takbiratulIhram(),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      niyyah("Dhuhr",4), takbiratulIhram(), openingDua(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(2),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashFirst(),
       takbirUp(3),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(4),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashahhud(), salawat(), salamRight(), salamLeft(),
     ],
   },
@@ -190,15 +202,15 @@ const PRAYERS = {
     name: "'Asr", rakatCount: 4, tagalog: "Dasal ng Hapon",
     icon: "🌤️", description: "4 Raka'at — Fard", color: "#F8961E",
     steps: [
-      niyyah("'Asr",4), takbiratulIhram(),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      niyyah("'Asr",4), takbiratulIhram(), openingDua(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(2),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashFirst(),
       takbirUp(3),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(4),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashahhud(), salawat(), salamRight(), salamLeft(),
     ],
   },
@@ -206,13 +218,13 @@ const PRAYERS = {
     name: "Maghrib", rakatCount: 3, tagalog: "Dasal ng Takipsilim",
     icon: "🌇", description: "3 Raka'at — Fard", color: "#C77DBA",
     steps: [
-      niyyah("Maghrib",3), takbiratulIhram(),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      niyyah("Maghrib",3), takbiratulIhram(), openingDua(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(2),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashFirst(),
       takbirUp(3),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashahhud(), salawat(), salamRight(), salamLeft(),
     ],
   },
@@ -220,15 +232,15 @@ const PRAYERS = {
     name: "'Isha", rakatCount: 4, tagalog: "Dasal ng Gabi",
     icon: "🌙", description: "4 Raka'at — Fard", color: "#577590",
     steps: [
-      niyyah("'Isha",4), takbiratulIhram(),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      niyyah("'Isha",4), takbiratulIhram(), openingDua(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(2),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashFirst(),
       takbirUp(3),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(4),
-      alFatiha(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashahhud(), salawat(), salamRight(), salamLeft(),
     ],
   },
@@ -236,13 +248,13 @@ const PRAYERS = {
     name: "Witr", rakatCount: 3, tagalog: "Dasal ng Witr (Sunnah)",
     icon: "✨", description: "3 Raka'at — Sunnah", color: "#4D908E",
     steps: [
-      niyyah("Witr",3), takbiratulIhram(),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      niyyah("Witr",3), takbiratulIhram(), openingDua(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       takbirUp(2),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashFirst(),
       takbirUp(3),
-      alFatiha(), additionalSurah(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
+      alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), firstSujood(), sittingBetween(), secondSujood(),
       tashahhud(), salawat(), salamRight(), salamLeft(),
     ],
   },
@@ -281,7 +293,7 @@ export default function SalahApp() {
           <div style={S.bism}>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
           <div style={{fontSize:44,marginBottom:12}}>🕌</div>
           <h1 style={S.title}>Gabay sa Salah</h1>
-          <p style={S.sub}>Hakbang-hakbang na gabay sa pagdarasal<br/>para sa mga bagong Muslim</p>
+          <p style={S.sub}>Hakbang-hackbang na gabay sa pagdarasal<br/>para sa mga bagong Muslim</p>
         </div>
         <div style={S.grid}>
           {PRAYER_ORDER.map(k=>{
@@ -377,7 +389,7 @@ const S = {
   pFill:{height:"100%",borderRadius:2,transition:"width 0.35s ease"},
   cnt:{flex:1,overflowY:"auto",padding:"16px 18px",display:"flex",flexDirection:"column",gap:14},
   sTitle:{fontSize:19,fontWeight:700,color:"#FFF",margin:0,textAlign:"center"},
-  illust:{display:"flex",flexDirection:"column",alignItems:"center",padding:"16px 0",background:"radial-gradient(ellipse at center,rgba(212,165,116,0.04) 0%,transparent 70%)",borderRadius:16},
+  illust:{display:"flex",flexDirection:"column",alignItems:"center",padding:"166px 0",background:"radial-gradient(ellipse at center,rgba(212,165,116,0.04) 0%,transparent 70%)",borderRadius:16},
   illustWrap:{width:"100%",maxWidth:300,aspectRatio:"1/1",borderRadius:24,background:"rgba(255,255,255,0.03)",position:"relative",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",overflow:"hidden",padding:20,boxSizing:"border-box"},
   poseImg:{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",transition:"transform 0.3s ease"},
   iBox:{display:"flex",gap:10,alignItems:"flex-start",background:"rgba(42,157,143,0.06)",border:"1px solid rgba(42,157,143,0.12)",borderLeft:"3px solid #2A9D8F",borderRadius:"0 10px 10px 0",padding:"12px 14px"},
