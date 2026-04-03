@@ -113,7 +113,7 @@ const standingFromRuku = () => ({
   instruction: "Tumayo nang tuwid mula sa ruku'. Sabihin habang tumitindig.",
 });
 const takbirToSujood = () => ({
-  title: "Takbir (Sujood)", pose: "TAKBIR",
+  title: "Takbir (Sujood)", pose: "STANDING",
   arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
   instruction: "Sabihin ang 'Allaahu Akbar' habang bumababa para sa Sujood.",
 });
@@ -124,7 +124,7 @@ const firstSujood = () => ({
   instruction: "Magpatirapa — noo, ilong, dalawang palad, dalawang tuhod, at dalawang paa sa sahig.",
 });
 const takbirToSitting = () => ({
-  title: "Takbir (Pag-upo)", pose: "TAKBIR",
+  title: "Takbir (Pag-upo)", pose: "SITTING",
   arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
   instruction: "Sabihin ang 'Allaahu Akbar' habang bumabangon mula sa Sujood para umupo.",
 });
@@ -135,7 +135,7 @@ const sittingBetween = () => ({
   instruction: "Umupo nang sandali sa pagitan ng dalawang sujood.",
 });
 const takbirToSecondSujood = () => ({
-  title: "Takbir (Pangalawang Sujood)", pose: "TAKBIR",
+  title: "Takbir (Pangalawang Sujood)", pose: "SITTING",
   arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
   instruction: "Sabihin ang 'Allaahu Akbar' habang bumababa para sa pangalawang Sujood.",
 });
@@ -146,7 +146,7 @@ const secondSujood = () => ({
   instruction: "Magpatirapa ulit tulad ng unang sujood.",
 });
 const takbirToTashahhud = () => ({
-  title: "Takbir (Tashahhud)", pose: "TAKBIR",
+  title: "Takbir (Tashahhud)", pose: "SITTING",
   arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
   instruction: "Sabihin ang 'Allaahu Akbar' habang bumabangon mula sa Sujood para sa Tashahhud (Pananatiling nakaupo).",
 });
