@@ -90,7 +90,7 @@ const alFatiha = () => ({
 const additionalSurah = () => ({
   title: "Magbasa ng Surah", pose: "HANDS_FOLDED",
   arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ\nاللَّهُ الصَّمَدُ\nلَمْ يَلِدْ وَلَمْ يُولَدْ\nوَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
-  transliteration: "Qul huwallaahu ahad\nAllaahus-samad\nLam yalid wa lam yoolad\nWa lam yakun lahoo kufuwan ahad",
+  transliteration: "Qul huwallaahu ahad\nAllaahus-samad\nLam yalid wa lang yoolad\nWa lam yakun lahoo kufuwan ahad",
   tagalog: "Sabihin: Siya ang Allah, ang Nag-iisa\nAng Allah ang Sandigan\nHindi Siya nagkaanak at hindi Siya ipinanganak\nAt walang katulad Niya kahit isa",
   instruction: "Magbasa ng kahit anong surah. Halimbawa: Suratul Ikhlas (Al-Ikhlas 112).",
 });
@@ -187,6 +187,69 @@ const tashFirst = () => ({
 });
 
 // ============================================================
+// SUNNAH DHIKR AFTER PRAYER (MA BA'D AS-SALAH)
+// ============================================================
+
+const dhikr1 = () => ({
+  title: "Dhikr 1: Astaghfirullah", pose: "SITTING",
+  arabic: "أَسْتَغْفِرُ اللَّهَ (٣x)\n\nاللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
+  transliteration: "Astaghfirullaah (3x)\n\nAllaahumma Antas-Salaamu wa minkas-salaamu tabaarakta yaa Zal-Jalaali wal-Ikraam",
+  tagalog: "Ako ay humihingi ng tawad sa Allah (3x).\n\nO Allah, Ikaw ang Kapayapaan at mula sa Iyo ang kapayapaan. Mapagpala Ka, O Nagtataglay ng Kadakilaan at Karangalan.",
+  instruction: "Pagkatapos ng Salam, manatiling nakaupo at basahin ito.",
+});
+
+const dhikr2 = () => ({
+  title: "Dhikr 2: Tawheed & Praise", pose: "SITTING",
+  arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\n\nاللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ",
+  transliteration: "Laa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer\n\nAllaahumma laa maani'a limaa a'tayta, wa laa mu'tiya limaa mana'ta, wa laa yanfa'u zal-jaddi minkal-jadd",
+  tagalog: "Walang diyos maliban sa Allah, Siyang Nag-iisa... O Allah, walang makakahadlang sa Iyong ibibigay at walang makakapagbigay sa Iyong ipinagkait.",
+  instruction: "Basahin ito habang nakaupo.",
+});
+
+const dhikr3 = () => ({
+  title: "Dhikr 3: La Hawla...", pose: "SITTING",
+  arabic: "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لَا إِلَهَ إِلَّا اللَّهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ",
+  transliteration: "Laa hawla wa laa quwwata illaa billaah, laa ilaaha illallaahu wa laa na'budu illaa iyyaah, lahun-ni'matu wa lahul-fadlu wa lahus-thanaa'ul-hasan, laa ilaaha illallaahu mukhliseena lahud-deena wa law karihal-kaafiroon",
+  tagalog: "Walang kapangyarihan at lakas kundi mula sa Allah... Siya lamang ang aming sinasamba...",
+  instruction: "Ipagpatuloy ang pag-upo at pag-dhikr.",
+});
+
+const tasbih33 = () => ({
+  title: "Tasbih, Tahmid, & Takbir", pose: "SITTING",
+  arabic: "سُبْحَانَ اللَّهِ (33x)\nالْحَمْدُ لِلَّهِ (33x)\nاللَّهُ أَكْبَرُ (33x)\n\n(Pang-100):\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+  transliteration: "Subhaanallaah (33x)\nAlhamdu lillaah (33x)\nAllaahu Akbar (33x)\n\n(100th):\nLaa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer",
+  tagalog: "Luwalhati sa Allah (33x), Papuri sa Allah (33x), Ang Allah ay Dakila (33x). Kumpletuhin ang 100 sa pamamagitan ng pag-aalinlangan na walang ibang diyos...",
+  instruction: "Bilangin gamit ang mga daliri ng kanang kamay.",
+});
+
+const dhikr4_fajr_maghrib = () => ({
+  title: "Dhikr 4: (10x pagkatapos ng Fajr/Maghrib)", pose: "SITTING",
+  arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (١٠x)",
+  transliteration: "Laa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu, yuhyee wa yumeetu, wa Huwa 'alaa kulli shay'in Qadeer (10x)",
+  tagalog: "Walang diyos maliban sa Allah... Siya ang nagbibigay ng buhay at nagdudulot ng kamatayan... (10 beses)",
+  instruction: "Basahin ito ng 10 beses pagkatapos ng Fajr at Maghrib (Sunnah).",
+});
+
+const ayatUlKursi = () => ({
+  title: "Dhikr 5: Ayat-ul-Kursi", pose: "SITTING",
+  arabic: "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+  transliteration: "Allaahu laa ilaaha illaa Huwal-Hayyul-Qayyoom; laa ta'khuzuhu sinatun wa laa nawm; lahu maa fissamaawaati wa maa fil-ard; man zallazee yashfa'u 'indahoo illaa bi-iznih; ya'lamu maa bayna aydeehim wa maa khalfahum, wa laa yuheetoona bishay'im min 'ilmihee illaa bimaa shaaa'; wasi'a Kursiyyuhus samaawaati wal arda wa laa ya'ooduhoo hifzuhumaa; wa Huwal 'Aliyyul 'Azeem",
+  tagalog: "Ang Allah, walang ibang diyos kundi Siya, ang Buhay, ang Walang-hanggan... (Ayat-ul-Kursi)",
+  instruction: "Basahin ang Ayat-ul-Kursi pagkatapos ng bawat farḍ na dasal.",
+});
+
+const threeQuls_3x = () => ({
+  title: "Dhikr 6: 3 Quls (3x)", pose: "SITTING",
+  arabic: "Suratul Ikhlas (3x)\nSuratul Al-Falaq (3x)\nSuratul An-Nas (3x)",
+  transliteration: "Qul huwallaahu ahad... (3x)\nQul a'oozu birabbil falaq... (3x)\nQul a'oozu birabbin naas... (3x)",
+  tagalog: "Basahin ang bawat surah ng tatlong beses.",
+  instruction: "Basahin ang tatlong huling surah ng Qur'an (Isang beses sa ibang dasal, 3 beses sa Fajr at Maghrib).",
+});
+
+const genericDhikr = [dhikr1(), dhikr2(), dhikr3(), tasbih33(), ayatUlKursi(), threeQuls_3x()];
+const fajrMaghribDhikr = [dhikr1(), dhikr4_fajr_maghrib(), dhikr2(), dhikr3(), tasbih33(), ayatUlKursi(), threeQuls_3x()];
+
+// ============================================================
 // PRAYER DEFINITIONS
 // ============================================================
 
@@ -200,6 +263,7 @@ const PRAYERS = {
       takbirUp(2),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirToTashahhud(), tashahhud(), salawat(), salamRight(), salamLeft(),
+      ...fajrMaghribDhikr
     ],
   },
   dhuhr: {
@@ -216,6 +280,7 @@ const PRAYERS = {
       takbirUp(4),
       alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirToTashahhud(), tashahhud(), salawat(), salamRight(), salamLeft(),
+      ...genericDhikr
     ],
   },
   asr: {
@@ -232,6 +297,7 @@ const PRAYERS = {
       takbirUp(4),
       alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirToTashahhud(), tashahhud(), salawat(), salamRight(), salamLeft(),
+      ...genericDhikr
     ],
   },
   maghrib: {
@@ -246,6 +312,7 @@ const PRAYERS = {
       takbirUp(3),
       alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirToTashahhud(), tashahhud(), salawat(), salamRight(), salamLeft(),
+      ...fajrMaghribDhikr
     ],
   },
   isha: {
@@ -262,6 +329,7 @@ const PRAYERS = {
       takbirUp(4),
       alFatiha(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirToTashahhud(), tashahhud(), salawat(), salamRight(), salamLeft(),
+      ...genericDhikr
     ],
   },
   witr: {
@@ -276,6 +344,7 @@ const PRAYERS = {
       takbirUp(3),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirToTashahhud(), tashahhud(), salawat(), salamRight(), salamLeft(),
+      ...genericDhikr
     ],
   },
 };
