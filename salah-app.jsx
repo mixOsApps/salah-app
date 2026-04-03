@@ -11,6 +11,7 @@ import rukuImg from "./images/ruku.png";
 import standingFromRukuImg from "./images/standing from ruku.png";
 import sujoodImg from "./images/sujood.png";
 import sittingImg from "./images/sitting.png";
+import tashahudImg from "./images/tashahud.png";
 import salamLeftImg from "./images/salam left.png";
 import salamRightImg from "./images/salam right.png";
 
@@ -22,6 +23,7 @@ const POSE_IMAGES = {
   STANDING_FROM_RUKU: standingFromRukuImg,
   SUJOOD: sujoodImg,
   SITTING: sittingImg,
+  TASHAHUD: tashahudImg,
   SALAM_RIGHT: salamRightImg,
   SALAM_LEFT: salamLeftImg,
 };
@@ -146,19 +148,19 @@ const secondSujood = () => ({
   instruction: "Magpatirapa ulit tulad ng unang sujood.",
 });
 const takbirToTashahhud = () => ({
-  title: "Takbir (Tashahhud)", pose: "SITTING",
+  title: "Takbir (Tashahhud)", pose: "TASHAHUD",
   arabic: "اللَّهُ أَكْبَرُ", transliteration: "Allaahu Akbar", tagalog: "Ang Allah ay Dakila",
   instruction: "Sabihin ang 'Allaahu Akbar' habang bumabangon mula sa Sujood para sa Tashahhud (Pananatiling nakaupo).",
 });
 const tashahhud = () => ({
-  title: "Tashahhud (At-Tahiyyat)", pose: "SITTING",
+  title: "Tashahhud (At-Tahiyyat)", pose: "TASHAHUD",
   arabic: "التَّحِيَّاتُ لِلَّهِ وَالصَّلَاوَاتُ وَالطَّيِّبَاتُ\nالسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ\nالسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ\nوَأَشْهَدُ أَنْ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
   transliteration: "At-tahiyyaatu lillaahi was-salawaatu wat-tayyibaat\nAs-salaamu 'alayka ayyuhan-nabiyyu wa rahmatullaahi wa barakaatuh\nAs-salaamu 'alaynaa wa 'alaa 'ibaadillaahis-saaliheen\nAsh-hadu an laa ilaaha illallaah\nWa ash-hadu anna Muhammadan 'abduhu wa rasooluh",
   tagalog: "Ang lahat ng pagbati, panalangin at kabutihan ay para sa Allah\nKapayapaan sa iyo, O Propeta, at ang awa at pagpapala ng Allah\nKapayapaan sa amin at sa lahat ng mabubuting lingkod ng Allah\nAko ay sumasaksi na walang diyos kundi ang Allah\nAt ako ay sumasaksi na si Muhammad ay Kanyang alipin at Sugo",
   instruction: "Umupo at basahin ang Tashahhud. Ituro ang hintuturo (shahadah finger) sa 'Ash-hadu'.",
 });
 const salawat = () => ({
-  title: "Salawat (Durood Ibrahim)", pose: "SITTING",
+  title: "Salawat (Durood Ibrahim)", pose: "TASHAHUD",
   arabic: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ\n\nاللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ",
   transliteration: "Allaahumma salli 'alaa Muhammad wa 'alaa aali Muhammad\nKamaa sallayta 'alaa Ibraaheem wa 'alaa aali Ibraaheem\nInnaka hameedun majeed\n\nAllaahumma baarik 'alaa Muhammad wa 'alaa aali Muhammad\nKamaa baarakta 'alaa Ibraaheem wa 'alaa aali Ibraaheem\nInnaka hameedun majeed",
   tagalog: "O Allah, pagpalain Mo si Muhammad at ang pamilya ni Muhammad\nTulad ng pagpapala Mo kay Ibrahim at sa pamilya ni Ibrahim\nKatotohanan, Ikaw ay Kapuri-puri at Maluwalhati\n\nO Allah, igawad Mo ang Iyong pagpapala kay Muhammad at sa pamilya ni Muhammad\nTulad ng paggawad Mo ng pagpapala kay Ibrahim at sa pamilya ni Ibrahim\nKatotohanan, Ikaw ay Kapuri-puri at Maluwalhati",
@@ -191,7 +193,7 @@ const tashFirst = () => ({
 // ============================================================
 
 const dhikr1 = () => ({
-  title: "Dhikr 1: Astaghfirullah", pose: "SITTING",
+  title: "Dhikr 1: Astaghfirullah", pose: "TASHAHUD",
   arabic: "أَسْتَغْفِرُ اللَّهَ (٣x)\n\nاللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
   transliteration: "Astaghfirullaah (3x)\n\nAllaahumma Antas-Salaamu wa minkas-salaamu tabaarakta yaa Zal-Jalaali wal-Ikraam",
   tagalog: "Ako ay humihingi ng tawad sa Allah (3x).\n\nO Allah, Ikaw ang Kapayapaan at mula sa Iyo ang kapayapaan. Mapagpala Ka, O Nagtataglay ng Kadakilaan at Karangalan.",
@@ -199,7 +201,7 @@ const dhikr1 = () => ({
 });
 
 const dhikr2 = () => ({
-  title: "Dhikr 2: Tawheed & Praise", pose: "SITTING",
+  title: "Dhikr 2: Tawheed & Praise", pose: "TASHAHUD",
   arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ\n\nاللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ",
   transliteration: "Laa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer\n\nAllaahumma laa maani'a limaa a'tayta, wa laa mu'tiya limaa mana'ta, wa laa yanfa'u zal-jaddi minkal-jadd",
   tagalog: "Walang diyos maliban sa Allah, Siyang Nag-iisa... O Allah, walang makakahadlang sa Iyong ibibigay at walang makakapagbigay sa Iyong ipinagkait.",
@@ -207,7 +209,7 @@ const dhikr2 = () => ({
 });
 
 const dhikr3 = () => ({
-  title: "Dhikr 3: La Hawla...", pose: "SITTING",
+  title: "Dhikr 3: La Hawla...", pose: "TASHAHUD",
   arabic: "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَلَا نَعْبُدُ إِلَّا إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لَا إِلَهَ إِلَّا اللَّهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ",
   transliteration: "Laa hawla wa laa quwwata illaa billaah, laa ilaaha illallaahu wa laa na'budu illaa iyyaah, lahun-ni'matu wa lahul-fadlu wa lahus-thanaa'ul-hasan, laa ilaaha illallaahu mukhliseena lahud-deena wa law karihal-kaafiroon",
   tagalog: "Walang kapangyarihan at lakas kundi mula sa Allah... Siya lamang ang aming sinasamba...",
@@ -215,7 +217,7 @@ const dhikr3 = () => ({
 });
 
 const tasbih33 = () => ({
-  title: "Tasbih, Tahmid, & Takbir", pose: "SITTING",
+  title: "Tasbih, Tahmid, & Takbir", pose: "TASHAHUD",
   arabic: "سُبْحَانَ اللَّهِ (33x)\nالْحَمْدُ لِلَّهِ (33x)\nاللَّهُ أَكْبَرُ (33x)\n\n(Pang-100):\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
   transliteration: "Subhaanallaah (33x)\nAlhamdu lillaah (33x)\nAllaahu Akbar (33x)\n\n(100th):\nLaa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer",
   tagalog: "Luwalhati sa Allah (33x), Papuri sa Allah (33x), Ang Allah ay Dakila (33x). Kumpletuhin ang 100 sa pamamagitan ng pag-aalinlangan na walang ibang diyos...",
@@ -223,7 +225,7 @@ const tasbih33 = () => ({
 });
 
 const dhikr4_fajr_maghrib = () => ({
-  title: "Dhikr 4: (10x pagkatapos ng Fajr/Maghrib)", pose: "SITTING",
+  title: "Dhikr 4: (10x pagkatapos ng Fajr/Maghrib)", pose: "TASHAHUD",
   arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (١٠x)",
   transliteration: "Laa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu, yuhyee wa yumeetu, wa Huwa 'alaa kulli shay'in Qadeer (10x)",
   tagalog: "Walang diyos maliban sa Allah... Siya ang nagbibigay ng buhay at nagdudulot ng kamatayan... (10 beses)",
@@ -231,7 +233,7 @@ const dhikr4_fajr_maghrib = () => ({
 });
 
 const ayatUlKursi = () => ({
-  title: "Dhikr 5: Ayat-ul-Kursi", pose: "SITTING",
+  title: "Dhikr 5: Ayat-ul-Kursi", pose: "TASHAHUD",
   arabic: "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
   transliteration: "Allaahu laa ilaaha illaa Huwal-Hayyul-Qayyoom; laa ta'khuzuhu sinatun wa laa nawm; lahu maa fissamaawaati wa maa fil-ard; man zallazee yashfa'u 'indahoo illaa bi-iznih; ya'lamu maa bayna aydeehim wa maa khalfahum, wa laa yuheetoona bishay'im min 'ilmihee illaa bimaa shaaa'; wasi'a Kursiyyuhus samaawaati wal arda wa laa ya'ooduhoo hifzuhumaa; wa Huwal 'Aliyyul 'Azeem",
   tagalog: "Ang Allah, walang ibang diyos kundi Siya, ang Buhay, ang Walang-hanggan... (Ayat-ul-Kursi)",
@@ -239,7 +241,7 @@ const ayatUlKursi = () => ({
 });
 
 const threeQuls_3x = () => ({
-  title: "Dhikr 6: 3 Quls (3x)", pose: "SITTING",
+  title: "Dhikr 6: 3 Quls (3x)", pose: "TASHAHUD",
   arabic: "Suratul Ikhlas (3x)\nSuratul Al-Falaq (3x)\nSuratul An-Nas (3x)",
   transliteration: "Qul huwallaahu ahad... (3x)\nQul a'oozu birabbil falaq... (3x)\nQul a'oozu birabbin naas... (3x)",
   tagalog: "Basahin ang bawat surah ng tatlong beses.",
