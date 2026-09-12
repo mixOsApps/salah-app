@@ -28,35 +28,53 @@ const POSE_IMAGES = {
   SALAM_LEFT: salamLeftImg,
 };
 
-function PoseIllustration({ pose }) {
+// Localized display label for the pose caption under/over the illustration.
+// Android used to print the raw Pose enum name (`pose.name.replace("_","
+// ")`) — always English, with a literal underscore, in every locale — until
+// PrayerModels.kt added `Pose.labelRes()` to route it through resources
+// instead (see that function's doc comment, and the call-site comment at
+// PrayerDetailScreen.kt:~323-326). This object is the web equivalent: one
+// place for W3 to localise instead of the raw key leaking into the UI.
+// Values match Android's values/strings.xml (pose_standing, pose_ruku, …)
+// verbatim.
+export const POSE_LABELS = {
+  STANDING: "STANDING",
+  TAKBIR: "TAKBIR",
+  HANDS_FOLDED: "HANDS FOLDED",
+  RUKU: "RUKU'",
+  STANDING_FROM_RUKU: "STANDING FROM RUKU'",
+  SUJOOD: "SUJOOD",
+  SITTING: "SITTING",
+  TASHAHUD: "TASHAHHUD",
+  SALAM_RIGHT: "SALAM (RIGHT)",
+  SALAM_LEFT: "SALAM (LEFT)",
+};
+
+function PoseIllustration({ pose, title, poseLabel }) {
   const src = POSE_IMAGES[pose] || POSE_IMAGES.STANDING;
   const isSalamLeft = pose === "SALAM_LEFT";
   const isSalamRight = pose === "SALAM_RIGHT";
 
   return (
-    <div style={S.illustWrap}>
-      <img
-        src={src}
-        alt={pose}
-        style={S.poseImg}
-      />
+    <div className="salah-illust-wrap">
+      <img src={src} alt={pose} className="salah-pose-img" />
       {(isSalamLeft || isSalamRight) && (
-        <div style={{
-          position: "absolute",
-          top: 12,
-          [isSalamRight ? "right" : "left"]: 12,
-          background: "rgba(42, 157, 143, 0.9)",
-          color: "white",
-          padding: "4px 10px",
-          borderRadius: 20,
-          fontSize: 10,
-          fontWeight: "bold",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
-          letterSpacing: 0.5
-        }}>
+        <div
+          className={
+            "salah-salam-badge " +
+            (isSalamRight ? "salah-salam-badge--right" : "salah-salam-badge--left")
+          }
+        >
           {isSalamRight ? "TINGIN SA KANAN →" : "← TINGIN SA KALIWA"}
         </div>
       )}
+      {/* Title + pose label overlaid on the bottom of the illustration,
+          over a gradient — the Android arrangement. See .salah-illust-overlay
+          in styles.css. */}
+      <div className="salah-illust-overlay">
+        <h2 className="salah-illust-overlay-title">{title}</h2>
+        <div className="salah-pose-label">{poseLabel}</div>
+      </div>
     </div>
   );
 }
@@ -382,121 +400,85 @@ export default function SalahApp() {
 
   if(!sel) {
     return (
-      <div style={S.root}>
-        <div style={S.arc}/>
-        <div style={S.hdr}>
-          <div style={S.bism}>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-          <div style={{fontSize:44,marginBottom:12}}>🕌</div>
-          <h1 style={S.title}>Gabay sa Salah</h1>
-          <p style={S.sub}>Hakbang-hackbang na gabay sa pagdarasal<br/>para sa mga bagong Muslim</p>
+      <div className="salah-screen salah-screen--home">
+        <div className="salah-arc"/>
+        <div className="salah-header">
+          <div className="salah-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+          <div className="salah-header-glyph">🕌</div>
+          <h1 className="salah-home-title">Gabay sa Salah</h1>
+          <p className="salah-home-sub">Hakbang-hackbang na gabay sa pagdarasal<br/>para sa mga bagong Muslim</p>
         </div>
-        <div style={S.grid}>
+        <div className="salah-prayer-grid">
           {PRAYER_ORDER.map(k=>{
             const p=PRAYERS[k];
             return(
-              <button key={k} onClick={()=>{setSel(k);setStep(0);}} style={S.card}
-                onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-3px)";e.currentTarget.style.borderColor=p.color;}}
-                onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.borderColor="rgba(255,255,255,0.08)";}}
+              <button
+                key={k}
+                onClick={()=>{setSel(k);setStep(0);}}
+                className="salah-prayer-card"
+                style={{ "--prayer-accent": p.color }}
               >
-                <div style={{...S.cIcon,background:`${p.color}22`}}>{p.icon}</div>
-                <div style={{flex:1}}>
-                  <div style={S.cName}>{p.name}</div>
-                  <div style={S.cTl}>{p.tagalog}</div>
+                <div className="salah-prayer-card-icon">{p.icon}</div>
+                <div className="salah-prayer-card-body">
+                  <div className="salah-prayer-card-name">{p.name}</div>
+                  <div className="salah-prayer-card-subtitle">{p.tagalog}</div>
                 </div>
-                <div style={{...S.cBadge,background:`${p.color}22`,color:p.color}}>{p.description}</div>
+                <div className="salah-prayer-card-badge">{p.description}</div>
               </button>
             );
           })}
         </div>
-        <p style={S.foot}>🕌 Gabay sa Salah — Para sa mga bagong Muslim</p>
+        <p className="salah-footer">🕌 Gabay sa Salah — Para sa mga bagong Muslim</p>
       </div>
     );
   }
 
   const ac = prayer.color||"#2A9D8F";
   return (
-    <div style={S.root}>
-      <div style={S.top}>
-        <button onClick={()=>{setSel(null);setStep(0);}} style={S.back}>← Bumalik</button>
-        <div style={S.topT}>{prayer.icon} {prayer.name}</div>
-        <div style={{...S.sBadge,background:`${ac}33`,color:ac}}>{step+1}/{total}</div>
+    <div
+      className="salah-screen salah-screen--step"
+      style={{ "--prayer-accent": ac, "--progress-pct": `${pct}%` }}
+    >
+      <div className="salah-topbar">
+        <button onClick={()=>{setSel(null);setStep(0);}} className="salah-back-btn">← Bumalik</button>
+        <div className="salah-topbar-title">{prayer.icon} {prayer.name}</div>
+        <div className="salah-step-badge">{step+1}/{total}</div>
       </div>
-      <div style={S.pWrap}><div style={{...S.pFill,width:`${pct}%`,background:ac}}/></div>
+      <div className="salah-progress-wrap"><div className="salah-progress-fill"/></div>
 
-      <div ref={ref} style={S.cnt}>
-        <h2 style={S.sTitle}>{s.title}</h2>
-        <div style={S.illust}>
-          <PoseIllustration pose={s.pose}/>
-          <div style={{fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:1.5,marginTop:8,color:ac,textAlign:"center",opacity:0.8}}>
-            {s.pose.replace(/_/g,' ')}
+      <div className="salah-step-body">
+        <div className="salah-illust-header">
+          <div className="salah-illust-decorative">
+            <PoseIllustration pose={s.pose} title={s.title} poseLabel={POSE_LABELS[s.pose] || s.pose} />
           </div>
         </div>
-        <div style={{...S.iBox,borderLeftColor:ac}}>
-          <span style={{fontSize:18,flexShrink:0}}>📖</span>
-          <p style={S.iTxt}>{s.instruction}</p>
-        </div>
 
-        {showAr && s.arabic && <div style={S.tCard}><div style={S.lbl}>عربي — Arabic</div><div style={S.ar}>{s.arabic}</div></div>}
-        {showTr && s.transliteration && <div style={S.tCard}><div style={S.lbl}>Transliteration</div><div style={S.tr}>{s.transliteration}</div></div>}
-        {showTl && s.tagalog && <div style={S.tCard}><div style={S.lbl}>🇵🇭 Salin sa Tagalog</div><div style={S.tl}>{s.tagalog}</div></div>}
+        <div ref={ref} className="salah-content">
+          <div className="salah-instruction-box">
+            <span className="salah-instruction-icon">📖</span>
+            <p className="salah-instruction-text">{s.instruction}</p>
+          </div>
 
-        <div style={S.togRow}>
-          {[{k:"ar",l:"عربي",a:showAr,f:setShowAr},{k:"tr",l:"Translit",a:showTr,f:setShowTr},{k:"tl",l:"Tagalog",a:showTl,f:setShowTl}].map(t=>(
-            <button key={t.k} onClick={()=>t.f(!t.a)} style={{
-              ...S.tog, ...(t.a?{background:`${ac}25`,borderColor:`${ac}66`,color:ac}:{})
-            }}>{t.l}</button>
-          ))}
+          {showAr && s.arabic && <div className="salah-text-card"><div className="salah-text-card-label">عربي — Arabic</div><div className="salah-arabic-text">{s.arabic}</div></div>}
+          {showTr && s.transliteration && <div className="salah-text-card"><div className="salah-text-card-label">Transliteration</div><div className="salah-translit-text">{s.transliteration}</div></div>}
+          {showTl && s.tagalog && <div className="salah-text-card"><div className="salah-text-card-label">🇵🇭 Salin sa Tagalog</div><div className="salah-tagalog-text">{s.tagalog}</div></div>}
+
+          <div className="salah-toggle-row">
+            {[{k:"ar",l:"عربي",a:showAr,f:setShowAr},{k:"tr",l:"Translit",a:showTr,f:setShowTr},{k:"tl",l:"Tagalog",a:showTl,f:setShowTl}].map(t=>(
+              <button
+                key={t.k}
+                onClick={()=>t.f(!t.a)}
+                className={"salah-toggle-btn" + (t.a ? " is-active" : "")}
+              >{t.l}</button>
+            ))}
+          </div>
         </div>
-        <div style={{height:20}}/>
       </div>
 
-      <div style={S.nav}>
-        <button onClick={()=>go(step-1)} disabled={step===0} style={{...S.nBtn,opacity:step===0?.35:1}}>◀ Nakaraan</button>
-        <button onClick={()=>go(step+1)} disabled={step>=total-1} style={{...S.nPri,background:step>=total-1?"#555":ac,opacity:step>=total-1?.4:1}}>Susunod ▶</button>
+      <div className="salah-navbar">
+        <button onClick={()=>go(step-1)} disabled={step===0} className="salah-nav-btn salah-nav-prev">◀ Nakaraan</button>
+        <button onClick={()=>go(step+1)} disabled={step>=total-1} className="salah-nav-btn salah-nav-next">Susunod ▶</button>
       </div>
     </div>
   );
 }
-
-// ============================================================
-// STYLES
-// ============================================================
-
-const S = {
-  root:{minHeight:"100vh",background:"#0B1622",color:"#E0DCD4",fontFamily:"'Segoe UI','Noto Sans',system-ui,sans-serif",display:"flex",flexDirection:"column",maxWidth:480,margin:"0 auto",position:"relative"},
-  arc:{position:"absolute",top:0,left:0,right:0,height:200,background:"radial-gradient(ellipse at top,rgba(42,157,143,0.08) 0%,transparent 70%)",pointerEvents:"none"},
-  hdr:{textAlign:"center",padding:"44px 24px 16px",position:"relative"},
-  bism:{fontFamily:"'Amiri','Traditional Arabic',serif",fontSize:20,color:"#D4A574",marginBottom:20,opacity:.9},
-  title:{fontSize:30,fontWeight:800,margin:"0 0 8px",color:"#FFF",letterSpacing:-.5},
-  sub:{fontSize:13,color:"#7A8EA0",margin:0,lineHeight:1.6},
-  grid:{display:"flex",flexDirection:"column",gap:10,padding:"24px 18px",flex:1},
-  card:{display:"flex",alignItems:"center",gap:14,padding:"14px 16px",background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:14,cursor:"pointer",transition:"all 0.25s ease",color:"#E0DCD4",textAlign:"left",width:"100%"},
-  cIcon:{width:44,height:44,borderRadius:12,display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,flexShrink:0},
-  cName:{fontSize:16,fontWeight:700,color:"#FFF"},
-  cTl:{fontSize:12,color:"#7A8EA0",marginTop:2},
-  cBadge:{fontSize:10,fontWeight:700,padding:"4px 10px",borderRadius:20,whiteSpace:"nowrap",flexShrink:0},
-  foot:{textAlign:"center",padding:20,fontSize:11,color:"#3E5060",margin:0},
-  top:{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 16px 10px",borderBottom:"1px solid rgba(255,255,255,0.05)"},
-  back:{background:"none",border:"none",color:"#2A9D8F",fontSize:13,fontWeight:600,cursor:"pointer",padding:"4px 0"},
-  topT:{fontSize:15,fontWeight:700,color:"#FFF"},
-  sBadge:{fontSize:12,fontWeight:700,padding:"3px 10px",borderRadius:16},
-  pWrap:{height:3,background:"rgba(255,255,255,0.06)"},
-  pFill:{height:"100%",borderRadius:2,transition:"width 0.35s ease"},
-  cnt:{flex:1,overflowY:"auto",padding:"12px 18px",display:"flex",flexDirection:"column",gap:10},
-  sTitle:{fontSize:19,fontWeight:700,color:"#FFF",margin:0,textAlign:"center"},
-  illust:{display:"flex",flexDirection:"column",alignItems:"center",padding:"4px 0",background:"radial-gradient(ellipse at center,rgba(212,165,116,0.04) 0%,transparent 70%)",borderRadius:16},
-  illustWrap:{width:"100%",maxWidth:280,aspectRatio:"1/1",borderRadius:24,background:"rgba(255,255,255,0.03)",position:"relative",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",overflow:"hidden",padding:16,boxSizing:"border-box"},
-  poseImg:{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",transition:"transform 0.3s ease"},
-  iBox:{display:"flex",gap:10,alignItems:"flex-start",background:"rgba(42,157,143,0.06)",border:"1px solid rgba(42,157,143,0.12)",borderLeft:"3px solid #2A9D8F",borderRadius:"0 10px 10px 0",padding:"10px 14px"},
-  iTxt:{margin:0,fontSize:13.5,lineHeight:1.65,color:"#B0BEC5"},
-  tCard:{background:"rgba(255,255,255,0.025)",borderRadius:12,padding:"14px 16px",border:"1px solid rgba(255,255,255,0.05)"},
-  lbl:{fontSize:10,fontWeight:700,color:"#D4A574",textTransform:"uppercase",letterSpacing:1.2,marginBottom:8},
-  ar:{fontFamily:"'Amiri','Traditional Arabic',serif",fontSize:19,lineHeight:2.1,direction:"rtl",textAlign:"right",color:"#FFF",whiteSpace:"pre-line"},
-  tr:{fontSize:14,lineHeight:1.85,color:"#A0B0BD",fontStyle:"italic",whiteSpace:"pre-line"},
-  tl:{fontSize:13.5,lineHeight:1.75,color:"#B8C8D8",whiteSpace:"pre-line"},
-  togRow:{display:"flex",gap:8,justifyContent:"center"},
-  tog:{background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.08)",borderRadius:20,padding:"5px 16px",fontSize:12,color:"#6A7E8E",cursor:"pointer",transition:"all 0.2s",fontWeight:500},
-  nav:{display:"flex",gap:10,padding:"12px 18px 24px",borderTop:"1px solid rgba(255,255,255,0.05)",background:"rgba(11,22,34,0.97)"},
-  nBtn:{flex:1,padding:"13px",border:"1px solid rgba(255,255,255,0.12)",borderRadius:12,background:"rgba(255,255,255,0.03)",color:"#D0CCC4",fontSize:13.5,fontWeight:600,cursor:"pointer"},
-  nPri:{flex:1,padding:"13px",border:"none",borderRadius:12,color:"#FFF",fontSize:13.5,fontWeight:700,cursor:"pointer",boxShadow:"0 4px 14px rgba(0,0,0,0.3)"},
-};

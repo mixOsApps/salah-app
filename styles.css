@@ -1,0 +1,712 @@
+/* ============================================================
+   Salah App — stylesheet (W1: moved out of inline JS style objects)
+   ============================================================
+   Class names are prefixed `salah-` throughout. Plain CSS, no build-time
+   preprocessing, no dependency added — see WEB_TASK_PROMPTS.md (W1) for why.
+*/
+
+/* ------------------------------------------------------------
+   Palette — the Android dark theme, from
+   app/src/main/java/com/mixzen/salah/ui/theme/Color.kt.
+   W5 adds the light theme by redefining exactly these eight values under a
+   [data-theme="light"] selector. Nothing below this block should hardcode
+   one of these eight colours — do that and light mode gets a hole in it.
+   ------------------------------------------------------------ */
+:root {
+  --salah-bg: #0B1622;          /* AppBackground */
+  --salah-card: #162431;        /* CardBackground (= Android's Material "surface") */
+  --salah-accent: #2A9D8F;      /* AccentColor */
+  --salah-gold: #D4A574;        /* GoldColor */
+  --salah-text-primary: #FFFFFF;
+  --salah-text-secondary: #7A8EA0;
+  --salah-text-tertiary: #B0BEC5;
+  --salah-footer: #3E5060;
+}
+
+/* ------------------------------------------------------------
+   Reset / base
+   ------------------------------------------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  /* Outside the centred column at tablet/desktop widths (see the
+     width-capping rules below), this is what shows at the page edges —
+     without it the capped column floats on the browser's default white. */
+  background: var(--salah-bg);
+  color: var(--salah-text-primary);
+  /* The step screen locks its own height to the viewport and scrolls only
+     its content column; nothing about the app needs the page itself to
+     scroll sideways, and a couple of the absolutely-positioned pieces
+     (salam badge, illustration overlay) would be the first to poke out by
+     a pixel while this was being built, so this is a deliberate guard, not
+     a band-aid. */
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------------------
+   Screen shell — shared by the home/picker screen and the step screen.
+   `position: relative` anchors each screen's absolutely-positioned children
+   (the home screen's decorative arc; the step screen's illustration
+   overlay and salam badge).
+   ------------------------------------------------------------ */
+.salah-screen {
+  position: relative;
+  width: 100%;
+  font-family: 'Segoe UI', 'Noto Sans', system-ui, sans-serif;
+  color: var(--salah-text-primary);
+}
+
+/* Home screen: a normal document-flow page. It grows with its content and
+   the page scrolls — there's no fixed header/footer to protect here. */
+.salah-screen--home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Step screen: height is locked to the viewport and only `.salah-content`
+   (the text below the illustration) scrolls — see the `.salah-step-body` /
+   `.salah-content` rules below. `100dvh` (falling back to `100vh` for
+   browsers that don't support it) accounts for mobile browser chrome that
+   `100vh` alone can misjudge. */
+.salah-screen--step {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------
+   Home screen
+   ------------------------------------------------------------ */
+.salah-arc {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 200px;
+  background: radial-gradient(ellipse at top, color-mix(in srgb, var(--salah-accent) 8%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.salah-header {
+  text-align: center;
+  padding-block: 44px 16px;
+  padding-inline: 24px;
+  position: relative;
+}
+
+.salah-bismillah {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 20px;
+  color: var(--salah-gold);
+  margin-block-end: 20px;
+  opacity: 0.9;
+}
+
+.salah-header-glyph {
+  font-size: 44px;
+  margin-block-end: 12px;
+}
+
+.salah-home-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: var(--salah-text-primary);
+  letter-spacing: -0.5px;
+}
+
+.salah-home-sub {
+  font-size: 13px;
+  color: var(--salah-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.salah-prayer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block: 24px;
+  padding-inline: 18px;
+  flex: 1;
+}
+
+.salah-prayer-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: 14px;
+  padding-inline: 16px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  color: var(--salah-text-primary);
+  text-align: start;
+  width: 100%;
+  font: inherit;
+}
+
+/* Replaces the old onMouseEnter/onMouseLeave inline-style mutation with a
+   plain CSS hover rule — same visual effect, works on touch without a JS
+   handler, and needs no inline style at all. `--prayer-accent` is the
+   per-card custom property set in the JSX (see salah-app.jsx); it is data
+   (this card's prayer colour), not a style decision, so it stays inline —
+   everything else about the card lives here. */
+.salah-prayer-card:hover,
+.salah-prayer-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--prayer-accent);
+}
+
+.salah-prayer-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--prayer-accent) 13.3%, transparent);
+}
+
+.salah-prayer-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.salah-prayer-card-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+}
+
+.salah-prayer-card-subtitle {
+  font-size: 12px;
+  color: var(--salah-text-secondary);
+  margin-top: 2px;
+}
+
+.salah-prayer-card-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--prayer-accent) 13.3%, transparent);
+  color: var(--prayer-accent);
+}
+
+.salah-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 11px;
+  color: var(--salah-footer);
+  margin: 0;
+}
+
+/* ------------------------------------------------------------
+   Step screen — top bar / progress
+   ------------------------------------------------------------ */
+.salah-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 14px 10px;
+  padding-inline: 16px;
+  border-block-end: 1px solid color-mix(in srgb, var(--salah-text-primary) 5%, transparent);
+  flex: 0 0 auto;
+}
+
+.salah-back-btn {
+  background: none;
+  border: none;
+  color: var(--salah-accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding-block: 4px;
+  padding-inline: 0;
+  font: inherit;
+}
+
+.salah-topbar-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+}
+
+.salah-step-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--prayer-accent) 20%, transparent);
+  color: var(--prayer-accent);
+}
+
+.salah-progress-wrap {
+  height: 3px;
+  background: color-mix(in srgb, var(--salah-text-primary) 6%, transparent);
+  flex: 0 0 auto;
+}
+
+.salah-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.35s ease;
+  background: var(--prayer-accent);
+  /* --progress-pct is runtime data (how far through the steps the reader
+     is) rather than a style decision, so — like --prayer-accent — it
+     travels in as a custom property instead of a hardcoded class. It's set
+     once, alongside --prayer-accent, on .salah-screen--step. */
+  width: var(--progress-pct, 0%);
+}
+
+/* ------------------------------------------------------------
+   Step screen — body (illustration header + scrolling content)
+   Mobile/tablet: a flex column. The illustration is a fixed-size band
+   that does NOT scroll; only `.salah-content` below it does. This is the
+   Android arrangement (PrayerDetailScreen.kt's Scaffold: a fixed-height
+   Box above a separately-scrolling Column) — previously the web version
+   scrolled the illustration away with everything else.
+   ------------------------------------------------------------ */
+.salah-step-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.salah-illust-header {
+  flex: 0 0 auto;
+  height: clamp(160px, 26vh, 240px);
+}
+
+.salah-illust-decorative {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 4px;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--salah-gold) 4%, transparent) 0%, transparent 70%);
+}
+
+.salah-illust-wrap {
+  height: 100%;
+  width: auto;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  background: var(--salah-card);
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.salah-pose-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Salam badge: the user is told to turn their head physically right, then
+   physically left, on the two salam steps. That is a real-world direction,
+   not a UI-flow direction, so — unlike almost everything else in this
+   file — it deliberately uses physical `left`/`right`, not
+   `inset-inline-start/end`. Under a future Arabic (RTL) UI this must NOT
+   mirror; the instruction-box border a few rules down is the contrasting
+   case that *should* mirror. */
+.salah-salam-badge {
+  position: absolute;
+  top: 12px;
+  background: color-mix(in srgb, var(--salah-accent) 90%, transparent);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.salah-salam-badge--right {
+  right: 12px; /* physical — see comment above .salah-salam-badge */
+}
+
+.salah-salam-badge--left {
+  left: 12px; /* physical — see comment above .salah-salam-badge */
+}
+
+/* Step title + pose label, overlaid on the bottom of the illustration over
+   a transparent-to-black gradient — the Android arrangement
+   (PrayerDetailScreen.kt's "Step Title Overlay" Box). Previously the web
+   version put the title in a separate <h2> above the illustration and the
+   pose label in a separate row below it. */
+.salah-illust-overlay {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  padding-block: 20px 10px;
+  padding-inline: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.salah-illust-overlay-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+  margin: 0;
+  text-align: center;
+}
+
+.salah-pose-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-block-start: 8px;
+  color: var(--prayer-accent);
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* ------------------------------------------------------------
+   Step screen — scrolling content (instruction box, text cards, toggles)
+   ------------------------------------------------------------ */
+.salah-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-block: 12px 20px;
+  padding-inline: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.salah-instruction-box {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: color-mix(in srgb, var(--prayer-accent) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--prayer-accent) 12%, transparent);
+  /* Qibla is not ported on the web (owner's call — see WEB_TASK_PROMPTS.md),
+     so this box is always plain, non-interactive text: no cursor, no
+     click handler, no button role. */
+  border-inline-start: 3px solid var(--prayer-accent);
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  border-start-end-radius: 10px;
+  border-end-end-radius: 10px;
+  padding-block: 10px;
+  padding-inline: 14px;
+}
+
+.salah-instruction-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.salah-instruction-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--salah-text-tertiary);
+  text-align: start;
+}
+
+.salah-text-card {
+  background: var(--salah-card);
+  border-radius: 12px;
+  padding-block: 14px;
+  padding-inline: 16px;
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 5%, transparent);
+}
+
+.salah-text-card-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--salah-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-block-end: 8px;
+}
+
+/* Arabic script has a fixed reading direction that belongs to the content
+   itself, not to the app's current UI language: it starts at the right
+   even inside an LTR English UI, and — this is the part that's easy to
+   get backwards — it must STAY right-aligned even inside a future RTL
+   (Arabic) UI too. `text-align: end` would flip to *left* under
+   `dir="rtl"`, which is wrong here; physical `right` holds regardless of
+   layout direction. Same reasoning, confirmed live on-device, as the
+   comment on Android's ContentCard in PrayerDetailScreen.kt. */
+.salah-arabic-text {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 19px;
+  line-height: 2.1;
+  direction: rtl;
+  text-align: right;
+  color: var(--salah-text-primary);
+  white-space: pre-line;
+}
+
+/* Transliteration is Latin-script by definition, so — mirroring the
+   Arabic card above — it must stay left-aligned even inside a future RTL
+   UI, not flip to the right. Physical `left`, not `text-align: start`. */
+.salah-translit-text {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #A0B0BD;
+  font-style: italic;
+  white-space: pre-line;
+  text-align: left;
+}
+
+.salah-tagalog-text {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #B8C8D8;
+  white-space: pre-line;
+  text-align: start;
+}
+
+.salah-toggle-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.salah-toggle-btn {
+  background: color-mix(in srgb, var(--salah-text-primary) 4%, transparent);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 12px;
+  color: #6A7E8E;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.salah-toggle-btn.is-active {
+  background: color-mix(in srgb, var(--prayer-accent) 14.5%, transparent);
+  border-color: color-mix(in srgb, var(--prayer-accent) 40%, transparent);
+  color: var(--prayer-accent);
+}
+
+/* ------------------------------------------------------------
+   Step screen — bottom nav
+   ------------------------------------------------------------ */
+.salah-navbar {
+  display: flex;
+  gap: 10px;
+  padding-block: 12px 24px;
+  padding-inline: 18px;
+  border-block-start: 1px solid color-mix(in srgb, var(--salah-text-primary) 5%, transparent);
+  background: color-mix(in srgb, var(--salah-bg) 97%, transparent);
+  flex: 0 0 auto;
+}
+
+.salah-nav-btn {
+  flex: 1;
+  padding: 13px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.salah-nav-btn:disabled {
+  cursor: default;
+}
+
+.salah-nav-prev {
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 12%, transparent);
+  background: color-mix(in srgb, var(--salah-text-primary) 3%, transparent);
+  color: #D0CCC4;
+}
+
+.salah-nav-prev:disabled {
+  opacity: 0.35;
+}
+
+.salah-nav-next {
+  border: none;
+  color: var(--salah-text-primary);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  background: var(--prayer-accent);
+}
+
+.salah-nav-next:disabled {
+  background: #555;
+  opacity: 0.4;
+}
+
+/* ============================================================
+   Tablet — single column, capped and centred (not full-bleed).
+   Applies to both screens; the laptop/desktop block below overrides the
+   cap again for each screen's wide layout.
+   ============================================================ */
+@media (min-width: 600px) {
+  .salah-screen--home,
+  .salah-screen--step {
+    max-width: 620px;
+    margin-inline: auto;
+  }
+}
+
+/* ============================================================
+   Laptop/desktop — a real wide layout, gated on a fine pointer so a
+   touch tablet (which can report 1024+ CSS px in landscape) keeps the
+   mobile/tablet layout. Do not switch this on `min-width` alone.
+   ============================================================ */
+@media (min-width: 1024px) and (pointer: fine) {
+  /* ---- Home / prayer picker: responsive grid ---- */
+  .salah-screen--home {
+    max-width: 1100px;
+  }
+
+  .salah-header {
+    padding-block-start: 56px;
+  }
+
+  .salah-home-title {
+    font-size: clamp(30px, 1.5vw + 24px, 40px);
+  }
+
+  .salah-home-sub {
+    font-size: clamp(13px, 0.3vw + 12px, 15px);
+  }
+
+  .salah-prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    /* This wider gutter (not just "a bit more than mobile's 18px") is what
+       makes the auto-fit/minmax(280px,1fr) track math land on 2 columns
+       around 1024px and 3 around 1440px, inside the 1100px cap above —
+       a narrower gutter lets a 3rd column fit at 1024px too. */
+    padding-inline: 80px;
+    padding-block: 32px;
+  }
+
+  .salah-prayer-card {
+    padding-block: 18px;
+    padding-inline: 20px;
+  }
+
+  /* ---- Step screen: two columns ---- */
+  .salah-screen--step {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .salah-topbar,
+  .salah-navbar {
+    padding-inline: 32px;
+  }
+
+  .salah-step-body {
+    /* Both columns now live inside one shared scroll container, so the
+       left column's `position: sticky` below has something to stick
+       within while the right column's content scrolls past it. */
+    display: grid;
+    grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+    gap: 32px;
+    overflow-y: auto;
+    padding-inline: 32px;
+  }
+
+  .salah-illust-header {
+    height: auto;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    padding-block-start: 24px;
+  }
+
+  .salah-illust-decorative {
+    height: auto;
+  }
+
+  .salah-illust-wrap {
+    height: auto;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .salah-illust-overlay-title {
+    font-size: clamp(19px, 0.6vw + 17px, 22px);
+  }
+
+  .salah-content {
+    overflow-y: visible;
+    min-height: 0;
+    padding-block: 24px 32px;
+    padding-inline: 0;
+    gap: 14px;
+  }
+
+  /* Cap the reading measure — the specific failure mode the owner called
+     out (the old layout let the Arabic/transliteration/translation cards
+     stretch to the full right-column width, well past a readable line
+     length on a 1440px screen). */
+  .salah-instruction-box,
+  .salah-text-card {
+    max-width: min(68ch, 720px);
+  }
+
+  .salah-instruction-box {
+    padding-block: 14px;
+    padding-inline: 18px;
+  }
+
+  .salah-instruction-text {
+    font-size: clamp(13.5px, 0.3vw + 13px, 15px);
+  }
+
+  .salah-text-card {
+    padding-block: 18px;
+    padding-inline: 20px;
+  }
+
+  /* Arabic deliberately does NOT scale up here — it already renders at
+     19px/2.1 line-height and Arabic diacritics need that leading; scaling
+     it further stops being comfortable. */
+  .salah-translit-text,
+  .salah-tagalog-text {
+    font-size: clamp(14px, 0.25vw + 13.5px, 15.5px);
+  }
+
+  .salah-toggle-row {
+    justify-content: start;
+  }
+}
