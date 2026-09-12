@@ -163,7 +163,7 @@ const secondSujood = () => ({
   title: "Pangalawang Sujood", pose: "SUJOOD",
   arabic: "سُبْحَانَ رَبِّيَ الْأَعْلَى", transliteration: "Subhaana Rabbiyal A'laa (3x)",
   tagalog: "Luwalhati sa aking Panginoon, ang Kataas-taasan (3 beses)",
-  instruction: "Magpatirapa ulit tulad ng unang sujood.",
+  instruction: "Magpatirapa — noo, ilong, dalawang palad, dalawang tuhod, at dalawang paa sa sahig.",
 });
 const takbirToTashahhud = () => ({
   title: "Takbir (Tashahhud)", pose: "TASHAHUD",
@@ -202,7 +202,7 @@ const takbirUp = (n) => ({
   instruction: `Tumayo para sa raka'at ${n}. Sabihin 'Allaahu Akbar'.`,
 });
 const tashFirst = () => ({
-  ...tashahhud(), title: "Tashahhud Una",
+  ...tashahhud(), title: "Unang Tashahhud",
   instruction: "Umupo at basahin ang Tashahhud. Pagkatapos, tumayo para sa susunod na raka'at.",
 });
 
@@ -212,9 +212,9 @@ const tashFirst = () => ({
 
 const dhikr1 = () => ({
   title: "Dhikr 1: Astaghfirullah", pose: "SITTING",
-  arabic: "أَسْتَغْفِرُ اللَّهَ (٣x)\n\nاللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
+  arabic: "أَسْتَغْفِرُ اللَّهَ (3x)\n\nاللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
   transliteration: "Astaghfirullaah (3x)\n\nAllaahumma Antas-Salaamu wa minkas-salaamu tabaarakta yaa Zal-Jalaali wal-Ikraam",
-  tagalog: "Ako ay humihingi ng tawad sa Allah (3x).\n\nO Allah, Ikaw ang Kapayapaan at mula sa Iyo ang kapayapaan. Mapagpala Ka, O Nagtataglay ng Kadakilaan at Karangalan.",
+  tagalog: "Ako ay humihingi ng tawad sa Allah (3 beses).\n\nO Allah, Ikaw ang Kapayapaan at mula sa Iyo ang kapayapaan. Mapagpala Ka, O Nagtataglay ng Kadakilaan at Karangalan.",
   instruction: "Pagkatapos ng Salam, manatiling nakaupo at basahin ito.",
 });
 
@@ -236,15 +236,15 @@ const dhikr3 = () => ({
 
 const tasbih33 = () => ({
   title: "Tasbih, Tahmid, & Takbir", pose: "SITTING",
-  arabic: "سُبْحَانَ اللَّهِ (33x)\nالْحَمْدُ لِلَّهِ (33x)\nاللَّهُ أَكْبَرُ (33x)\n\n(Pang-100):\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
-  transliteration: "Subhaanallaah (33x)\nAlhamdu lillaah (33x)\nAllaahu Akbar (33x)\n\n(100th):\nLaa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer",
-  tagalog: "Luwalhati sa Allah (33x), Papuri sa Allah (33x), Ang Allah ay Dakila (33x). Kumpletuhin ang 100 sa pamamagitan ng pag-aalinlangan na walang ibang diyos...",
+  arabic: "سُبْحَانَ اللَّهِ (33x)\nالْحَمْدُ لِلَّهِ (33x)\nاللَّهُ أَكْبَرُ (33x)\n\nلَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+  transliteration: "Subhaanallaah (33x)\nAlhamdu lillaah (33x)\nAllaahu Akbar (33x)\n\nLaa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu wa Huwa 'alaa kulli shay'in Qadeer",
+  tagalog: "Luwalhati sa Allah (33 beses), Papuri sa Allah (33 beses), Ang Allah ay Dakila (33 beses). Kumpletuhin ang 100 sa pamamagitan ng pagsasabi na walang ibang diyos...",
   instruction: "Bilangin gamit ang mga daliri ng kanang kamay.",
 });
 
 const dhikr4_fajr_maghrib = () => ({
-  title: "Dhikr 4: (10x pagkatapos ng Fajr/Maghrib)", pose: "SITTING",
-  arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (١٠x)",
+  title: "Dhikr 4: (10 beses pagkatapos ng Fajr/Maghrib)", pose: "SITTING",
+  arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (10x)",
   transliteration: "Laa ilaaha illallaahu wahdahoo laa shareeka lahoo, lahul-mulku wa lahul-hamdu, yuhyee wa yumeetu, wa Huwa 'alaa kulli shay'in Qadeer (10x)",
   tagalog: "Walang diyos maliban sa Allah... Siya ang nagbibigay ng buhay at nagdudulot ng kamatayan... (10 beses)",
   instruction: "Basahin ito ng 10 beses pagkatapos ng Fajr at Maghrib (Sunnah).",
@@ -255,12 +255,12 @@ const ayatUlKursi = () => ({
   arabic: "اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
   transliteration: "Allaahu laa ilaaha illaa Huwal-Hayyul-Qayyoom; laa ta'khuzuhu sinatun wa laa nawm; lahu maa fissamaawaati wa maa fil-ard; man zallazee yashfa'u 'indahoo illaa bi-iznih; ya'lamu maa bayna aydeehim wa maa khalfahum, wa laa yuheetoona bishay'im min 'ilmihee illaa bimaa shaaa'; wasi'a Kursiyyuhus samaawaati wal arda wa laa ya'ooduhoo hifzuhumaa; wa Huwal 'Aliyyul 'Azeem",
   tagalog: "Ang Allah, walang ibang diyos kundi Siya, ang Buhay, ang Walang-hanggan... (Ayat-ul-Kursi)",
-  instruction: "Basahin ang Ayat-ul-Kursi pagkatapos ng bawat farḍ na dasal.",
+  instruction: "Basahin ang Ayat-ul-Kursi pagkatapos ng bawat fard na dasal.",
 });
 
 const threeQuls_3x = () => ({
-  title: "Dhikr 6: 3 Quls (3x)", pose: "SITTING",
-  arabic: "Suratul Ikhlas (3x)\nSuratul Al-Falaq (3x)\nSuratul An-Nas (3x)",
+  title: "Dhikr 6: 3 Quls (3 beses)", pose: "SITTING",
+  arabic: "سورة الإخلاص (3x)\nسورة الفلق (3x)\nسورة الناس (3x)",
   transliteration: "Qul huwallaahu ahad... (3x)\nQul a'oozu birabbil falaq... (3x)\nQul a'oozu birabbin naas... (3x)",
   tagalog: "Basahin ang bawat surah ng tatlong beses.",
   instruction: "Basahin ang tatlong huling surah ng Qur'an (Isang beses sa ibang dasal, 3 beses sa Fajr at Maghrib).",
@@ -275,7 +275,7 @@ const fajrMaghribDhikr = [dhikr1(), dhikr4_fajr_maghrib(), dhikr2(), dhikr3(), t
 
 const PRAYERS = {
   fajr: {
-    name: "Fajr (Subh)", rakatCount: 2, tagalog: "Dasal ng Madaling-Araw",
+    name: "Fajr", rakatCount: 2, tagalog: "Dasal ng Madaling-Araw",
     icon: "🌅", description: "2 Raka'at — Fard", color: "#F4845F",
     steps: [
       niyyah("Fajr",2), takbiratulIhram(), openingDua(),
@@ -304,7 +304,7 @@ const PRAYERS = {
     ],
   },
   asr: {
-    name: "'Asr", rakatCount: 4, tagalog: "Dasal ng Hapon",
+    name: "Asr", rakatCount: 4, tagalog: "Dasal ng Hapon",
     icon: "🌤️", description: "4 Raka'at — Fard", color: "#F8961E",
     steps: [
       niyyah("'Asr",4), takbiratulIhram(), openingDua(),
@@ -336,7 +336,7 @@ const PRAYERS = {
     ],
   },
   isha: {
-    name: "'Isha", rakatCount: 4, tagalog: "Dasal ng Gabi",
+    name: "Isha", rakatCount: 4, tagalog: "Dasal ng Gabi",
     icon: "🌙", description: "4 Raka'at — Fard", color: "#577590",
     steps: [
       niyyah("'Isha",4), takbiratulIhram(), openingDua(),
@@ -353,8 +353,8 @@ const PRAYERS = {
     ],
   },
   witr: {
-    name: "Witr", rakatCount: 3, tagalog: "Dasal ng Witr (Sunnah)",
-    icon: "✨", description: "3 Raka'at — Sunnah", color: "#4D908E",
+    name: "Witr", rakatCount: 3, tagalog: "Dasal ng Witr",
+    icon: "✨", description: "3 Raka'at", color: "#4D908E",
     steps: [
       niyyah("Witr",3), takbiratulIhram(), openingDua(),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
