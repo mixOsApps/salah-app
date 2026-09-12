@@ -307,7 +307,7 @@ const PRAYERS = {
     name: "Asr", rakatCount: 4, tagalog: "Dasal ng Hapon",
     icon: "🌤️", description: "4 Raka'at — Fard", color: "#F8961E",
     steps: [
-      niyyah("'Asr",4), takbiratulIhram(), openingDua(),
+      niyyah("Asr",4), takbiratulIhram(), openingDua(),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirUp(2),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
@@ -339,7 +339,7 @@ const PRAYERS = {
     name: "Isha", rakatCount: 4, tagalog: "Dasal ng Gabi",
     icon: "🌙", description: "4 Raka'at — Fard", color: "#577590",
     steps: [
-      niyyah("'Isha",4), takbiratulIhram(), openingDua(),
+      niyyah("Isha",4), takbiratulIhram(), openingDua(),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
       takbirUp(2),
       alFatiha(), additionalSurah(), takbirToRuku(), ruku(), standingFromRuku(), takbirToSujood(), firstSujood(), takbirToSitting(), sittingBetween(), takbirToSecondSujood(), secondSujood(),
