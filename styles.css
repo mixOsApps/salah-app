@@ -341,7 +341,15 @@ body {
   position: absolute;
   top: 12px;
   background: color-mix(in srgb, var(--salah-accent) 90%, transparent);
-  color: white;
+  /* W1-2: was `white`. Android's comment at PrayerDetailScreen.kt:335-337
+     records that white on this teal at 0.9 alpha measures ~3.3:1 — below
+     WCAG's 4.5:1 for text this small (10sp bold doesn't qualify for the
+     "large text" 3:1 exception) — and that bestOnColor() picks black
+     instead, at ~6.3:1. `black`, not a token: bestOnColor() always resolves
+     to pure black or white, never one of the eight palette colours, and —
+     like the shadow below and the overlay gradient — black reads the same
+     in both themes. */
+  color: black;
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 10px;
@@ -480,7 +488,13 @@ body {
 .salah-translit-text {
   font-size: 14px;
   line-height: 1.85;
-  color: #A0B0BD;
+  /* W1-1: this was a hardcoded muted blue-grey, which would not follow
+     W5's light-theme token swap. Android's ContentCard
+     (PrayerDetailScreen.kt) colours the transliteration and translation
+     text identically to the Arabic card — MaterialTheme.colorScheme.
+     onSurface, which Theme.kt maps to TextPrimary in both palettes — not a
+     muted tertiary tone. Token it the same way. */
+  color: var(--salah-text-primary);
   font-style: italic;
   white-space: pre-line;
   text-align: left;
@@ -489,7 +503,9 @@ body {
 .salah-tagalog-text {
   font-size: 13.5px;
   line-height: 1.75;
-  color: #B8C8D8;
+  /* W1-1: this was a second hardcoded muted blue-grey — see the comment on
+     .salah-translit-text just above; same fix, same Android source. */
+  color: var(--salah-text-primary);
   white-space: pre-line;
   text-align: start;
 }
@@ -507,7 +523,12 @@ body {
   border-radius: 20px;
   padding: 5px 16px;
   font-size: 12px;
-  color: #6A7E8E;
+  /* W1-1: this was a hardcoded colour close to, but not, this token. The
+     language-toggle row has no Android equivalent to check (language is a
+     global setting there, not a per-screen toggle — see the W1 audit), but
+     the old value was already a close approximation of this exact token;
+     tokenise it properly so W5's light theme reaches it too. */
+  color: var(--salah-text-secondary);
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 500;
@@ -550,7 +571,12 @@ body {
 .salah-nav-prev {
   border: 1px solid color-mix(in srgb, var(--salah-text-primary) 12%, transparent);
   background: color-mix(in srgb, var(--salah-text-primary) 3%, transparent);
-  color: #D0CCC4;
+  /* W1-1: this was a hardcoded near-white warm grey. Android's enabled
+     Previous button (PrayerDetailScreen.kt) sets contentColor =
+     onBackground with no dimming at all — Theme.kt maps onBackground to
+     TextPrimary in both palettes — so full var(--salah-text-primary) is
+     what Android actually does, not a softened near-white. */
+  color: var(--salah-text-primary);
 }
 
 .salah-nav-prev:disabled {
@@ -566,7 +592,14 @@ body {
 }
 
 .salah-nav-next:disabled {
-  background: #555;
+  /* W1-1: this was a hardcoded flat mid-grey. Android composites its
+     disabled button background as onBackground at 12% alpha over the
+     screen background — a different mechanism than a flat fill — so
+     there's no single Android token that reproduces it exactly;
+     --salah-text-secondary keeps this a straight detokenisation (no new
+     alpha-composite model introduced) and still moves with W5's theme
+     swap. Existing 0.4 opacity on the rule unchanged. */
+  background: var(--salah-text-secondary);
   opacity: 0.4;
 }
 
