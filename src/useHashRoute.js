@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 function parseHash(hash) {
   const path = hash.replace(/^#/, "") || "/";
   if (path === "/settings") return { screen: "settings" };
+  if (path === "/about") return { screen: "about" };
   if (path === "/glossary") return { screen: "glossary" };
   const prayerMatch = path.match(/^\/prayer\/([^/]+)$/);
   if (prayerMatch) return { screen: "prayer", id: decodeURIComponent(prayerMatch[1]) };

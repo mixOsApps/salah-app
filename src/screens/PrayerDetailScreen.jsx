@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useI18n } from "../i18n";
+import { useTheme } from "../theme";
 import { poseImageUrl, poseLabelKey } from "../poseImages";
-import { bestOnColor } from "../colorUtils";
+import { bestOnColor, ensureContrastAgainst, SALAH_BG_DARK, SALAH_BG_LIGHT } from "../colorUtils";
 
 export default function PrayerDetailScreen({ prayer, onBack }) {
   const { t, resolveText, locale } = useI18n();
+  const { isDark } = useTheme();
   const [stepIndex, setStepIndex] = useState(0);
   const [showArabic, setShowArabic] = useState(true);
   const [showTransliteration, setShowTransliteration] = useState(true);
@@ -17,6 +19,11 @@ export default function PrayerDetailScreen({ prayer, onBack }) {
   const pct = ((stepIndex + 1) / total) * 100;
   const accentColor = prayer.color;
   const nextTextColor = bestOnColor(accentColor);
+  // Readable variant for text/icons (the step badge, the toggle chips); accentColor stays for
+  // fills and bars (the progress bar, the Next button, the illustration tint, the pose label,
+  // which all sit on either the raw accent or the illustration's own fixed-dark gradient, never
+  // on the page background) -- see PrayerDetailScreen.kt:92-94's identical split.
+  const accentText = ensureContrastAgainst(accentColor, isDark ? SALAH_BG_DARK : SALAH_BG_LIGHT);
   // Content-language comparison, not layout-direction: the Arabic/transliteration cards are
   // always the same fixed-language content, so a "Translation" card only becomes redundant when
   // the UI itself is Arabic -- see PrayerDetailScreen.kt's translationWouldBeRedundant comment.
@@ -51,7 +58,7 @@ export default function PrayerDetailScreen({ prayer, onBack }) {
   return (
     <div
       className="salah-screen salah-screen--step"
-      style={{ "--prayer-accent": accentColor, "--progress-pct": `${pct}%` }}
+      style={{ "--prayer-accent": accentColor, "--prayer-accent-text": accentText, "--progress-pct": `${pct}%` }}
     >
       <div className="salah-topbar">
         <button onClick={onBack} className="salah-back-btn">
