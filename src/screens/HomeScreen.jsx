@@ -1,8 +1,8 @@
 import { useI18n } from "../i18n";
 import appLogo from "../generated/assets/app-logo.png";
 
-export default function HomeScreen({ prayers, onPrayerClick, onSettingsClick }) {
-  const { t } = useI18n();
+export default function HomeScreen({ prayers, articles, glossary, onPrayerClick, onArticleClick, onGlossaryClick, onSettingsClick }) {
+  const { t, resolveText } = useI18n();
 
   return (
     <div className="salah-screen salah-screen--home">
@@ -33,6 +33,33 @@ export default function HomeScreen({ prayers, onPrayerClick, onSettingsClick }) 
           </button>
         ))}
       </div>
+
+      <div className="salah-reference-section">
+        <div className="salah-reference-section-title">{t("reference_section_title")}</div>
+        <div className="salah-reference-list">
+          {articles.map((article) => (
+            <button key={article.id} className="salah-reference-card" onClick={() => onArticleClick(article.id)}>
+              <span className="salah-reference-card-icon" aria-hidden="true">
+                📖
+              </span>
+              <span className="salah-reference-card-body">
+                <span className="salah-reference-card-title">{resolveText(article.title)}</span>
+                <span className="salah-reference-card-summary">{resolveText(article.summary)}</span>
+              </span>
+            </button>
+          ))}
+          <button className="salah-reference-card" onClick={onGlossaryClick}>
+            <span className="salah-reference-card-icon" aria-hidden="true">
+              📖
+            </span>
+            <span className="salah-reference-card-body">
+              <span className="salah-reference-card-title">{resolveText(glossary.title)}</span>
+              <span className="salah-reference-card-summary">{resolveText(glossary.summary)}</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
       <p className="salah-footer">{t("home_footer")}</p>
     </div>
   );
