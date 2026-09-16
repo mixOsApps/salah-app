@@ -50,6 +50,11 @@ export function ThemeProvider({ children }) {
     } else {
       document.documentElement.dataset.theme = "light";
     }
+    // index.html's <meta name="theme-color"> is a static default (matching :root's own default,
+    // dark) for before this runs; keep the installed-PWA/browser-chrome color in sync with
+    // whichever theme actually resolved, the same background --salah-bg gives the page itself.
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue("--salah-bg").trim();
   }, [isDark]);
 
   const setChoice = useCallback((next) => {
