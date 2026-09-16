@@ -1,0 +1,68 @@
+{
+  "generator": "tools_export_web.py",
+  "source": "salah-app",
+  "sourceCommit": "30d6f71d459038b97d48414731d199562d09e0fc",
+  "sourceDirty": false,
+  "locales": [
+    "en",
+    "ar",
+    "fil"
+  ],
+  "counts": {
+    "strings": {
+      "en": 991,
+      "ar": 991,
+      "fil": 991
+    },
+    "plurals": {
+      "en": 3,
+      "ar": 3,
+      "fil": 3
+    },
+    "arrays": {
+      "en": 2,
+      "ar": 2,
+      "fil": 2
+    },
+    "steps": {
+      "fajr": 38,
+      "dhuhr": 60,
+      "asr": 60,
+      "maghrib": 50,
+      "isha": 60,
+      "witr": 50
+    },
+    "articles": {
+      "wudu": {
+        "sections": 5,
+        "blocks": 44,
+        "positions": 34,
+        "citations": 59
+      },
+      "mistakes": {
+        "sections": 8,
+        "blocks": 49,
+        "positions": 32,
+        "citations": 57
+      },
+      "qada": {
+        "sections": 9,
+        "blocks": 34,
+        "positions": 24,
+        "citations": 45
+      },
+      "travel": {
+        "sections": 10,
+        "blocks": 37,
+        "positions": 32,
+        "citations": 54
+      }
+    },
+    "glossaryEntries": 36
+  },
+  "pdf": {
+    "file": "assets/salah-guide.pdf",
+    "originalName": "GABAY SA PAGSASAGAWA NG SALAH.pdf",
+    "sha256": "698e352f671b7848d20801869c22816994b0f487e37a8d79de00b521951578a3"
+  }
+}

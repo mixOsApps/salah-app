@@ -1,0 +1,24 @@
+{
+  "strings": {
+    "article_placeholder_citation": "Halimbawang sanggunian, para ipakita ang anyo",
+    "article_placeholder_differ_a": "Nakatampok ang piniling paaralan mo, tulad nito.",
+    "article_placeholder_differ_b": "Ipinapakita rin ang iba pang posisyon, para makita mong may pagkakaiba.",
+    "article_placeholder_differ_subject": "Kapag magkaiba ang mga paaralan, ipinapakita ng app ang lahat ng posisyon sa halip na pumili para sa iyo.",
+    "article_placeholder_intro": "Ito ay pansamantalang pahina na ginagamit sa pagbuo at pagsubok ng bahaging sanggunian. Hindi ito patnubay pangrelihiyon, at walang dapat kunin dito bilang gabay.",
+    "article_placeholder_s1_body": "Naghahanda ng mga gabay na magpapaliwanag hindi lang kung ano ang gagawin sa dasal, kundi kung bakit, ano ang mga kondisyon, at ano ang gagawin kapag may nagkamali. Kabilang sa mga binabalak na paksa:",
+    "article_placeholder_s1_bullet_1": "Wudu — ang paghuhugas bago magdasal",
+    "article_placeholder_s1_bullet_2": "Ano ang gagawin kapag nawala sa bilang ang iyong raka'at",
+    "article_placeholder_s1_bullet_3": "Talasalitaan ng mga terminong ginagamit sa app",
+    "article_placeholder_s1_heading": "Ano ang ilalagay dito",
+    "article_placeholder_s2_heading": "Paano binuo ang pahinang ito",
+    "article_placeholder_s2_note": "Ang mga paalala tulad nito ay nagtatampok ng kondisyon o babala na madaling makaligtaan.",
+    "article_placeholder_s2_step_1": "Ginagamit ang may-numerong listahan kapag mahalaga mismo ang pagkakasunod-sunod.",
+    "article_placeholder_s2_step_2": "Ipinapakita ang mga sanggunian sa ilalim ng mga sinusuportahan nito.",
+    "article_placeholder_s2_step_3": "Bawat linya dito ay naisasaling teksto, kaya mababasa ang gabay sa anumang suportadong wika.",
+    "article_placeholder_source_1": "Wala pang sanggunian — pansamantala ang pahinang ito",
+    "article_placeholder_summary": "Kung paano gagana ang mga gabay na sanggunian",
+    "article_placeholder_title": "Tungkol sa bahaging ito"
+  },
+  "plurals": {},
+  "arrays": {}
+}
