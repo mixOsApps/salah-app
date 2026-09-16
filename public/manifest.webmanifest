@@ -1,0 +1,24 @@
+{
+  "name": "Salah App",
+  "short_name": "Salah App",
+  "description": "A step-by-step prayer guide for new Muslims.",
+  "start_url": "/salah-app/",
+  "scope": "/salah-app/",
+  "display": "standalone",
+  "background_color": "#0B1622",
+  "theme_color": "#0B1622",
+  "icons": [
+    {
+      "src": "/salah-app/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/salah-app/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
