@@ -1,3 +1,4 @@
+import { ThemeProvider } from "./src/theme";
 import { I18nProvider, useI18n } from "./src/i18n";
 import { useHashRoute, navigate } from "./src/useHashRoute";
 import HomeScreen from "./src/screens/HomeScreen";
@@ -5,9 +6,11 @@ import PrayerDetailScreen from "./src/screens/PrayerDetailScreen";
 import SettingsScreen from "./src/screens/SettingsScreen";
 import ArticleScreen from "./src/screens/ArticleScreen";
 import GlossaryScreen from "./src/screens/GlossaryScreen";
+import AboutScreen from "./src/screens/AboutScreen";
 import prayersData from "./src/generated/prayers.json";
 import articlesData from "./src/generated/articles.json";
 import glossaryData from "./src/generated/glossary.json";
+import aboutData from "./src/generated/about.json";
 
 function AppShell() {
   const route = useHashRoute();
@@ -16,7 +19,11 @@ function AppShell() {
   if (!ready) return null;
 
   if (route.screen === "settings") {
-    return <SettingsScreen onBack={() => navigate("/")} />;
+    return <SettingsScreen onAboutClick={() => navigate("/about")} onBack={() => navigate("/")} />;
+  }
+
+  if (route.screen === "about") {
+    return <AboutScreen about={aboutData} onBack={() => navigate("/settings")} />;
   }
 
   if (route.screen === "glossary") {
@@ -52,8 +59,10 @@ function AppShell() {
 
 export default function SalahApp() {
   return (
-    <I18nProvider>
-      <AppShell />
-    </I18nProvider>
+    <ThemeProvider>
+      <I18nProvider>
+        <AppShell />
+      </I18nProvider>
+    </ThemeProvider>
   );
 }

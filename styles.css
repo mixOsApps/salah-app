@@ -21,6 +21,25 @@
   --salah-text-secondary: #7A8EA0;
   --salah-text-tertiary: #B0BEC5;
   --salah-footer: #3E5060;
+  /* Fixed regardless of theme -- PrayerDetailScreen.kt:338 hardcodes this exact literal
+     (`Color(0xFF2A9D8F)`) for the salam badge instead of reading SalahTheme.colors.accent, so
+     this token is deliberately absent from the [data-theme="light"] block below. */
+  --salah-salam-badge: #2A9D8F;
+}
+
+/* W5 -- light theme. Same eight tokens as :root (plus nothing -- --salah-salam-badge is
+   deliberately not redefined here, see its comment above), redefined with the light palette from
+   Color.kt. The dark palette's gold/teal/greys sit at 1.8:1-3.4:1 on white, so light mode needs
+   its own darker set rather than reusing them -- Color.kt's own comment says the same. */
+html[data-theme="light"] {
+  --salah-bg: #FDFDFD;          /* AppBackgroundLight */
+  --salah-card: #FFFFFF;        /* CardBackgroundLight */
+  --salah-accent: #1B6C63;      /* AccentColorLight -- 6.2:1 on white */
+  --salah-gold: #8A5A1F;        /* GoldColorLight -- 5.9:1 on white */
+  --salah-text-primary: #11181F;
+  --salah-text-secondary: #4A5C6B;
+  --salah-text-tertiary: #3D4C57;
+  --salah-footer: #5C6B78;
 }
 
 /* ------------------------------------------------------------
@@ -68,7 +87,8 @@ body {
    the page scrolls — there's no fixed header/footer to protect here. */
 .salah-screen--home,
 .salah-screen--settings,
-.salah-screen--article {
+.salah-screen--article,
+.salah-screen--about {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -227,7 +247,11 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
   background: color-mix(in srgb, var(--prayer-accent) 13.3%, transparent);
-  color: var(--prayer-accent);
+  /* --prayer-accent-text, not --prayer-accent: this is the pill's text, and the raw per-prayer
+     accents are tuned for the dark theme (Dhuhr's yellow lands near 1.5:1 on white). See its
+     comment where it's set, in HomeScreen.jsx -- matches HomeScreen.kt's PrayerDescriptionPill,
+     which colors its fill with the raw accentColor but its text with the re-toned accentText. */
+  color: var(--prayer-accent-text);
 }
 
 .salah-footer {
@@ -352,7 +376,10 @@ html[dir="rtl"] .salah-arrow {
   padding: 3px 10px;
   border-radius: 16px;
   background: color-mix(in srgb, var(--prayer-accent) 20%, transparent);
-  color: var(--prayer-accent);
+  /* --prayer-accent-text: this is the step-counter text ("3/12"), matching
+     PrayerDetailScreen.kt's top-bar Surface, which fills with the raw accentColor but colors its
+     Text with accentText -- see the comment on .salah-prayer-card-badge above. */
+  color: var(--prayer-accent-text);
 }
 
 .salah-progress-wrap {
@@ -449,7 +476,12 @@ html[dir="rtl"] .salah-arrow {
 .salah-salam-badge {
   position: absolute;
   top: 12px;
-  background: color-mix(in srgb, var(--salah-accent) 90%, transparent);
+  /* W5: was var(--salah-accent), which W5's light theme would have re-toned along with
+     everything else -- but PrayerDetailScreen.kt:338 hardcodes this badge's teal as a Color
+     literal instead of reading it from the theme, so it must not follow the light-theme swap
+     either. --salah-salam-badge is the same #2A9D8F value, fixed in both themes -- see its
+     comment on :root. */
+  background: color-mix(in srgb, var(--salah-salam-badge) 90%, transparent);
   /* W1-2: was `white`. Android's comment at PrayerDetailScreen.kt:335-337
      records that white on this teal at 0.9 alpha measures ~3.3:1 — below
      WCAG's 4.5:1 for text this small (10sp bold doesn't qualify for the
@@ -646,10 +678,14 @@ html[dir="rtl"] .salah-arrow {
   font-family: inherit;
 }
 
+/* All three properties key off --prayer-accent-text, not --prayer-accent: PrayerDetailScreen.kt
+   passes the re-toned accentText (not the raw accentColor) as ToggleChip's whole accentColor
+   param, so fill, border AND text are all the readable variant here -- unlike the badges above,
+   where only the text needs it. */
 .salah-toggle-btn.is-active {
-  background: color-mix(in srgb, var(--prayer-accent) 14.5%, transparent);
-  border-color: color-mix(in srgb, var(--prayer-accent) 40%, transparent);
-  color: var(--prayer-accent);
+  background: color-mix(in srgb, var(--prayer-accent-text) 14.5%, transparent);
+  border-color: color-mix(in srgb, var(--prayer-accent-text) 40%, transparent);
+  color: var(--prayer-accent-text);
 }
 
 /* ------------------------------------------------------------
@@ -804,6 +840,11 @@ html[dir="rtl"] .salah-arrow {
   padding-block: 20px;
   padding-inline: 18px;
   flex: 1;
+  /* Arrangement.spacedBy(24.dp) on SettingsScreen.kt's outer Column -- was unneeded before W5,
+     when Language was the only section. */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .salah-settings-section-title {
@@ -852,6 +893,118 @@ html[dir="rtl"] .salah-arrow {
 .salah-language-exonym {
   font-size: 12px;
   color: var(--salah-text-secondary);
+}
+
+/* Theme picker -- SettingsScreen.kt's SingleChoiceSegmentedButtonRow(System/Light/Dark). A row of
+   three equal pressable buttons rather than a literal connected segmented control, matching how
+   the language list already turns Android's dropdown into plain buttons -- consistent with this
+   screen's own established pattern, not the Material widget's specific chrome. */
+.salah-theme-row {
+  display: flex;
+  gap: 8px;
+}
+
+.salah-theme-option {
+  flex: 1;
+  padding-block: 10px;
+  padding-inline: 8px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--salah-text-primary);
+}
+
+.salah-theme-option.is-selected {
+  border-color: var(--salah-gold);
+  background: color-mix(in srgb, var(--salah-gold) 18%, transparent);
+  color: var(--salah-gold);
+}
+
+/* ------------------------------------------------------------
+   About screen (src/screens/AboutScreen.jsx). Reuses .salah-settings-topbar/.salah-settings-title
+   for the header and .salah-article-body for the content column, same as Article/Glossary.
+   ------------------------------------------------------------ */
+.salah-about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.salah-about-feature {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.53;
+  color: var(--salah-text-primary);
+}
+
+.salah-about-feature-bullet {
+  color: var(--salah-accent);
+  flex-shrink: 0;
+}
+
+.salah-about-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--salah-accent);
+  margin: 0;
+}
+
+.salah-about-text {
+  font-size: 14px;
+  line-height: 1.57;
+  color: var(--salah-text-secondary);
+  margin: 0;
+}
+
+.salah-about-text-primary {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--salah-text-primary);
+  margin: 0;
+}
+
+.salah-about-dua {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--salah-accent);
+  margin: 0;
+}
+
+.salah-about-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-block: 12px;
+  padding-inline: 16px;
+  border: none;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* contentColor = MaterialTheme.colorScheme.background in AboutButton(filled = true) -- the
+   background token, not literal black/white, because the per-theme accents were already chosen
+   to read well against their own theme's background. */
+.salah-about-btn--filled {
+  background: var(--salah-accent);
+  color: var(--salah-bg);
+}
+
+.salah-about-btn--outline {
+  background: color-mix(in srgb, var(--salah-accent) 12%, transparent);
+  color: var(--salah-accent);
 }
 
 /* ------------------------------------------------------------
@@ -1159,7 +1312,8 @@ html[dir="rtl"] .salah-arrow {
   .salah-screen--home,
   .salah-screen--step,
   .salah-screen--settings,
-  .salah-screen--article {
+  .salah-screen--article,
+  .salah-screen--about {
     max-width: 620px;
     margin-inline: auto;
   }

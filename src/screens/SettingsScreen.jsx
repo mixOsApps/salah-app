@@ -1,7 +1,9 @@
 import { useI18n } from "../i18n";
+import { useTheme, THEME_CHOICES } from "../theme";
 
-export default function SettingsScreen({ onBack }) {
+export default function SettingsScreen({ onAboutClick, onBack }) {
   const { t, locale, setLocale, languages } = useI18n();
+  const { choice, setChoice } = useTheme();
 
   return (
     <div className="salah-screen salah-screen--settings">
@@ -12,6 +14,22 @@ export default function SettingsScreen({ onBack }) {
         <div className="salah-settings-title">{t("settings")}</div>
       </div>
       <div className="salah-settings-body">
+        <section className="salah-settings-section">
+          <h2 className="salah-settings-section-title">{t("theme")}</h2>
+          <div className="salah-theme-row">
+            {THEME_CHOICES.map((value) => (
+              <button
+                key={value}
+                className={"salah-theme-option" + (value === choice ? " is-selected" : "")}
+                onClick={() => setChoice(value)}
+                aria-pressed={value === choice}
+              >
+                {t(value)}
+              </button>
+            ))}
+          </div>
+        </section>
+
         <section className="salah-settings-section">
           <h2 className="salah-settings-section-title">{t("language")}</h2>
           <div className="salah-language-list">
@@ -27,6 +45,13 @@ export default function SettingsScreen({ onBack }) {
               </button>
             ))}
           </div>
+        </section>
+
+        <section className="salah-settings-section">
+          <h2 className="salah-settings-section-title">{t("about_title")}</h2>
+          <button className="salah-about-btn salah-about-btn--outline" onClick={onAboutClick}>
+            {t("about_open")}
+          </button>
         </section>
       </div>
     </div>
