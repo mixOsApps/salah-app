@@ -1,0 +1,24 @@
+{
+  "strings": {
+    "article_placeholder_citation": "مصدر توضيحي، لبيان الشكل فقط",
+    "article_placeholder_differ_a": "يُميَّز مذهبك المختار، كهذا القول.",
+    "article_placeholder_differ_b": "وتُعرض بقية الأقوال أيضاً، لتعلم أن ثمة خلافاً.",
+    "article_placeholder_differ_subject": "حين تختلف المذاهب، يعرض التطبيق كل الأقوال بدلاً من اختيار واحد نيابة عنك.",
+    "article_placeholder_intro": "هذه صفحة مؤقتة تُستخدم لبناء واختبار قسم المراجع. ليست إرشاداً دينياً، ولا يُؤخذ منها شيء.",
+    "article_placeholder_s1_body": "يجري إعداد أدلة تشرح ليس فقط ما يُفعل في الصلاة، بل لماذا، وما شروطه، وما العمل عند الخطأ. من المواضيع المخطط لها:",
+    "article_placeholder_s1_bullet_1": "الوضوء — الطهارة الواجبة قبل الصلاة",
+    "article_placeholder_s1_bullet_2": "ماذا تفعل إذا نسيت عدد الركعات",
+    "article_placeholder_s1_bullet_3": "مسرد للمصطلحات المستخدمة في التطبيق",
+    "article_placeholder_s1_heading": "ما الذي سيُضاف هنا",
+    "article_placeholder_s2_heading": "كيف بُنيت هذه الصفحة",
+    "article_placeholder_s2_note": "الملاحظات مثل هذه تُبرز شرطاً أو تنبيهاً يسهل إغفاله.",
+    "article_placeholder_s2_step_1": "تُستخدم القوائم المرقّمة حين يكون الترتيب نفسه مهماً.",
+    "article_placeholder_s2_step_2": "تظهر المصادر أسفل ما تستند إليه.",
+    "article_placeholder_s2_step_3": "كل سطر هنا نص قابل للترجمة، ليُقرأ الدليل بأي لغة مدعومة.",
+    "article_placeholder_source_1": "لا مصادر بعد — هذه صفحة مؤقتة",
+    "article_placeholder_summary": "كيف ستعمل الأدلة المرجعية",
+    "article_placeholder_title": "عن هذا القسم"
+  },
+  "plurals": {},
+  "arrays": {}
+}

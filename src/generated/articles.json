@@ -1,0 +1,5062 @@
+{
+  "schools": [
+    {
+      "id": "HANAFI",
+      "label": "school_hanafi"
+    },
+    {
+      "id": "SHAFII",
+      "label": "school_shafii"
+    },
+    {
+      "id": "MALIKI",
+      "label": "school_maliki"
+    },
+    {
+      "id": "HANBALI",
+      "label": "school_hanbali"
+    }
+  ],
+  "articles": [
+    {
+      "id": "wudu",
+      "title": {
+        "type": "plain",
+        "key": "wudu_title",
+        "args": []
+      },
+      "summary": {
+        "type": "plain",
+        "key": "wudu_summary",
+        "args": []
+      },
+      "intro": {
+        "type": "plain",
+        "key": "wudu_intro",
+        "args": []
+      },
+      "sections": [
+        {
+          "heading": {
+            "type": "plain",
+            "key": "wudu_s1_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "note",
+              "text": {
+                "type": "plain",
+                "key": "wudu_unreviewed",
+                "args": []
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "wudu_s1_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_1_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_1_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_niyyah_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_niyyah_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_niyyah_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_niyyah_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_niyyah_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_niyyah_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_niyyah_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_niyyah_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_niyyah_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_2_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_2_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s1_2_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_3_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_3_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s1_3_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_4_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_4_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s1_4_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_head_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_head_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_head_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_head_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_head_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI",
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_head_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_head_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_5_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_5_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s1_5_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_6_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_6_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s1_6_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_tartib_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_tartib_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_tartib_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_tartib_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_tartib_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_tartib_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_tartib_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_tartib_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_tartib_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s1_7_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s1_7_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_muwalat_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI",
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_muwalat_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_muwalat_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_muwalat_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_muwalat_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_muwalat_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_muwalat_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "wudu_s2_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "wudu_s2_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_tasmiyah_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_tasmiyah_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_hands3_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s2_hands3_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_hands3_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_madmadah_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_madmadah_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_madmadah_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_madmadah_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_madmadah_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII",
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_madmadah_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_madmadah_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_madmadah_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_madmadah_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_istinshaq_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_istinshaq_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_istinshaq_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_istinshaq_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_istinshaq_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII",
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_istinshaq_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_istinshaq_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_istinshaq_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_istinshaq_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_beard_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s2_beard_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_beard_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_fingers_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_fingers_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_dalak_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s2_dalak_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_dalak_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI",
+                    "SHAFII",
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_dalak_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_dalak_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_dalak_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_dalak_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_exaggerate_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s2_exaggerate_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_exaggerate_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_right_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s2_right_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_right_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_three_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_three_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_ears_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s2_ears_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_ears_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s2_dua_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s2_dua_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "wudu_s3_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "wudu_s3_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s3_1_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s3_1_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s3_1_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s3_2_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s3_2_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s3_2_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_sleep_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_sleep_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_sleep_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII",
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_sleep_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_sleep_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_sleep_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_sleep_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s3_3_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "wudu_s3_3_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s3_4_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s3_4_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_touchself_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_touchself_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_touchself_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_touchself_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_touchself_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI",
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_touchself_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_touchself_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s3_5_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "wudu_s3_5_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_touchwoman_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_touchwoman_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_touchwoman_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_touchwoman_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_touchwoman_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI",
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_touchwoman_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_touchwoman_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "wudu_s3_6_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "wudu_d_blood_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_blood_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_blood_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII",
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_blood_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_blood_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "wudu_d_blood_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "wudu_d_blood_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "wudu_s4_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                {
+                  "type": "plain",
+                  "key": "wudu_s4_1",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s4_2",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s4_3",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s4_4",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s4_5",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s4_6",
+                  "args": []
+                }
+              ],
+              "citation": null
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "wudu_s5_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "wudu_s5_agree_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "bullets",
+              "items": [
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_1",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_2",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_3",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_4",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_5",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_6",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "wudu_s5_agree_7",
+                  "args": []
+                }
+              ],
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "wudu_s5_differ_body",
+                "args": []
+              },
+              "citation": null
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "type": "plain",
+            "key": "wudu_src_reliance",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "wudu_src_nur",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "wudu_src_risala",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "wudu_src_umdah",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "wudu_hadith_edition",
+            "args": []
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "mistakes",
+      "title": {
+        "type": "plain",
+        "key": "mistakes_title",
+        "args": []
+      },
+      "summary": {
+        "type": "plain",
+        "key": "mistakes_summary",
+        "args": []
+      },
+      "intro": {
+        "type": "plain",
+        "key": "mistakes_intro",
+        "args": []
+      },
+      "sections": [
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s1_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "note",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_unreviewed",
+                "args": []
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s1_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s1_count",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s1_count_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s1_limit",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s1_limit_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_trigger_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_trigger_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_trigger_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_trigger_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_trigger_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_trigger_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_trigger_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_trigger_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_trigger_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s2_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s2_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_timing_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_timing_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_timing_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_timing_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_timing_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_timing_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_timing_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_timing_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_timing_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s2_imam",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s2_imam_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s3_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s3_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s3_down1_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s3_down1_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s3_sit_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s3_sit_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s3_down2_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s3_finish_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s3_finish_detail",
+                "args": []
+              },
+              "citation": null
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s4_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s4_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s4_1_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s4_1_detail",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_doubt_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_doubt_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_doubt_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_doubt_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_doubt_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_doubt_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_doubt_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_doubt_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_doubt_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s4_2_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_tashahhud_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_tashahhud_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_tashahhud_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_tashahhud_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_tashahhud_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_tashahhud_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_tashahhud_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_tashahhud_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_tashahhud_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s4_3_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_extra_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_extra_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_extra_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_extra_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_extra_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_extra_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_extra_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_extra_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_extra_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s4_4_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_speech_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_speech_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_speech_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_speech_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_speech_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_speech_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_speech_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_speech_p4",
+                    "args": []
+                  },
+                  "citation": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s5_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s5_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s5_hanafi",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s5_hanafi_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s5_shafii",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s5_shafii_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s5_maliki",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s5_maliki_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s5_hanbali",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s5_hanbali_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s6_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s6_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_wudu_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s6_wudu_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_wudu_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_integral_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s6_integral_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_integral_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_speech_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s6_speech_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_speech_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_eat_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_eat_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_awrah_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s6_awrah_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_awrah_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_qibla_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_qibla_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s6_deliberate_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s6_deliberate_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s6_deliberate_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "note",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s6_note",
+                "args": []
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s7_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s7_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_1_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s7_1_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s7_1_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_settling_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_settling_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_settling_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_settling_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_settling_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_settling_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_settling_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_settling_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_settling_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_2_title",
+                "args": []
+              },
+              "detail": null,
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "mistakes_d_fatiha_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_fatiha_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_fatiha_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_fatiha_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_fatiha_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_fatiha_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_fatiha_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "mistakes_d_fatiha_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "mistakes_d_fatiha_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_imam_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s7_imam_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s7_imam_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_time_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s7_time_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s7_time_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_which_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s7_which_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s7_which_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_repeat_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s7_repeat_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s7_repeat_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "step",
+              "title": {
+                "type": "plain",
+                "key": "mistakes_s7_waswasa_title",
+                "args": []
+              },
+              "detail": {
+                "type": "plain",
+                "key": "mistakes_s7_waswasa_detail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s7_waswasa_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "mistakes_s8_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s8_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "bullets",
+              "items": [
+                {
+                  "type": "plain",
+                  "key": "mistakes_s8_agree_1",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "mistakes_s8_agree_2",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "mistakes_s8_agree_3",
+                  "args": []
+                }
+              ],
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "mistakes_s8_agree_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "mistakes_s8_differ",
+                "args": []
+              },
+              "citation": null
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "type": "plain",
+            "key": "mistakes_src_reliance",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "mistakes_src_nur",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "mistakes_src_risala",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "mistakes_src_umdah",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "mistakes_editions",
+            "args": []
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "qada",
+      "title": {
+        "type": "plain",
+        "key": "qada_title",
+        "args": []
+      },
+      "summary": {
+        "type": "plain",
+        "key": "qada_summary",
+        "args": []
+      },
+      "intro": {
+        "type": "plain",
+        "key": "qada_intro",
+        "args": []
+      },
+      "sections": [
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s1_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "note",
+              "text": {
+                "type": "plain",
+                "key": "qada_unreviewed",
+                "args": []
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s1_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s1_hadith",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s1_hadith_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s1_cause",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s1_cause_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s1_before_islam",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s1_before_islam_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "qada_d_excused_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_excused_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_excused_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_excused_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_excused_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_excused_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_excused_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_excused_p4",
+                    "args": []
+                  },
+                  "citation": null
+                }
+              ]
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "qada_d_coma_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_coma_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_coma_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_coma_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_coma_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_coma_p3",
+                    "args": []
+                  },
+                  "citation": null
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_coma_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_coma_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s2_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s2_body",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s2_body_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "note",
+              "text": {
+                "type": "plain",
+                "key": "qada_s2_note",
+                "args": []
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s2_deliberate",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s2_deliberate_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s2_minority",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s2_minority_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s3_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s3_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "qada_d_soon_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_soon_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_soon_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_soon_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_soon_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_soon_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_soon_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_soon_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_soon_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s4_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s4_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "qada_d_order_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_order_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_order_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_order_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_p4",
+                    "args": []
+                  },
+                  "citation": null
+                }
+              ]
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "qada_d_order_lift_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_lift_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_order_lift_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_lift_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_order_lift_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_lift_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_order_lift_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_order_lift_p4",
+                    "args": []
+                  },
+                  "citation": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s5_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s5_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "qada_d_many_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_many_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_many_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_many_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_many_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_many_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_many_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "qada_d_many_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "qada_d_many_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s5_tail",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s5_tail_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s6_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s6_body",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s6_body_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s6_hadith",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s6_hadith_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s6_fasts",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s6_fasts_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s6_edges",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s6_edges_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s7_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s7_body",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s7_body_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s7_others",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s7_others_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s8_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s8_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s8_count",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s8_count_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s8_recitation",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s8_recitation_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s8_adhan",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s8_adhan_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s8_group",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s8_group_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s8_unsure",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s8_unsure_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "qada_s9_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s9_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "bullets",
+              "items": [
+                {
+                  "type": "plain",
+                  "key": "qada_s9_agree_1",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "qada_s9_agree_2",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "qada_s9_agree_3",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "qada_s9_agree_4",
+                  "args": []
+                }
+              ],
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "qada_s9_agree_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "qada_s9_differ",
+                "args": []
+              },
+              "citation": null
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "type": "plain",
+            "key": "qada_src_reliance",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "qada_src_nur",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "qada_src_risala",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "qada_src_umdah",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "qada_editions",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "qada_hadith_edition",
+            "args": []
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "title": {
+        "type": "plain",
+        "key": "travel_title",
+        "args": []
+      },
+      "summary": {
+        "type": "plain",
+        "key": "travel_summary",
+        "args": []
+      },
+      "intro": {
+        "type": "plain",
+        "key": "travel_intro",
+        "args": []
+      },
+      "sections": [
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s1_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "note",
+              "text": {
+                "type": "plain",
+                "key": "travel_unreviewed",
+                "args": []
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s1_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s1_distance_intro",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_distance_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_distance_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_distance_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_distance_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_distance_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_distance_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_distance_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_distance_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_distance_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s1_purpose",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s1_purpose_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s1_route",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s1_route_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s2_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s2_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_begin_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_begin_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_begin_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_begin_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_begin_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_begin_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_begin_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_begin_p4",
+                    "args": []
+                  },
+                  "citation": null
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s2_end",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s2_end_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s3_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s3_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_stay_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_stay_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_stay_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_stay_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_stay_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_stay_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_stay_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_stay_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_stay_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s4_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s4_body",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s4_body_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s4_hadith",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s4_hadith_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s4_makeup",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s4_makeup_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s5_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s5_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_ruling_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_ruling_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_ruling_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_ruling_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_ruling_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_ruling_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_ruling_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_ruling_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_ruling_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s5_hanafi_note",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s5_hanafi_note_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s5_hadith",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s5_hadith_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s6_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s6_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_join_travel_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_travel_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_travel_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_travel_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_travel_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_travel_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_travel_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_travel_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_travel_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s6_shortening_link",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s6_shortening_link_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s6_arafah",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s6_arafah_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s7_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s7_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_join_rain_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_rain_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_rain_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_rain_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_rain_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_rain_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_rain_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_rain_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_rain_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_join_sick_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_sick_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_sick_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_sick_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_sick_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_sick_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_sick_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_join_sick_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_join_sick_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s8_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s8_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "schoolComparison",
+              "subject": {
+                "type": "plain",
+                "key": "travel_d_imam_subject",
+                "args": []
+              },
+              "positions": [
+                {
+                  "schools": [
+                    "HANAFI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_imam_p1",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_imam_p1_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "SHAFII"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_imam_p2",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_imam_p2_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "MALIKI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_imam_p3",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_imam_p3_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                },
+                {
+                  "schools": [
+                    "HANBALI"
+                  ],
+                  "text": {
+                    "type": "plain",
+                    "key": "travel_d_imam_p4",
+                    "args": []
+                  },
+                  "citation": {
+                    "label": {
+                      "type": "plain",
+                      "key": "travel_d_imam_p4_src",
+                      "args": []
+                    },
+                    "url": null
+                  }
+                }
+              ]
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s8_reverse",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s8_reverse_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s8_hadith",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s8_hadith_src",
+                  "args": []
+                },
+                "url": null
+              }
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s9_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s9_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s9_shafii",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s9_shafii_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s9_hanafi",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s9_hanafi_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s9_riding",
+                "args": []
+              },
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s9_riding_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s9_gap",
+                "args": []
+              },
+              "citation": null
+            }
+          ]
+        },
+        {
+          "heading": {
+            "type": "plain",
+            "key": "travel_s10_heading",
+            "args": []
+          },
+          "blocks": [
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s10_body",
+                "args": []
+              },
+              "citation": null
+            },
+            {
+              "type": "bullets",
+              "items": [
+                {
+                  "type": "plain",
+                  "key": "travel_s10_agree_1",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "travel_s10_agree_2",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "travel_s10_agree_3",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "travel_s10_agree_4",
+                  "args": []
+                },
+                {
+                  "type": "plain",
+                  "key": "travel_s10_agree_5",
+                  "args": []
+                }
+              ],
+              "citation": {
+                "label": {
+                  "type": "plain",
+                  "key": "travel_s10_agree_src",
+                  "args": []
+                },
+                "url": null
+              }
+            },
+            {
+              "type": "body",
+              "text": {
+                "type": "plain",
+                "key": "travel_s10_differ",
+                "args": []
+              },
+              "citation": null
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_src_reliance",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_src_nur",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_src_risala",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_src_umdah",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_editions",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_commentary_note",
+            "args": []
+          },
+          "url": null
+        },
+        {
+          "label": {
+            "type": "plain",
+            "key": "travel_hadith_edition",
+            "args": []
+          },
+          "url": null
+        }
+      ]
+    }
+  ]
+}

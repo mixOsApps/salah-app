@@ -1,0 +1,12 @@
+{
+  "tags": [
+    "en",
+    "fil",
+    "ar"
+  ],
+  "resourceDirs": {
+    "en": "values",
+    "fil": "values-tl",
+    "ar": "values-ar"
+  }
+}

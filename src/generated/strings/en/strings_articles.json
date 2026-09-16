@@ -1,0 +1,24 @@
+{
+  "strings": {
+    "article_placeholder_citation": "Example source, shown to demonstrate the format",
+    "article_placeholder_differ_a": "Your selected school is highlighted, like this one.",
+    "article_placeholder_differ_b": "Other positions are shown too, so you can see that a difference exists.",
+    "article_placeholder_differ_subject": "Where the schools of law disagree, this app shows every position rather than choosing one for you.",
+    "article_placeholder_intro": "This is a placeholder used to build and test the reference section. It is not religious guidance, and no guidance should be taken from it.",
+    "article_placeholder_s1_body": "Guides are being prepared to explain not just what to do in prayer, but why, what the conditions are, and what to do when something goes wrong. Planned topics include:",
+    "article_placeholder_s1_bullet_1": "Wudu — the washing required before prayer",
+    "article_placeholder_s1_bullet_2": "What to do if you lose count of your raka'at",
+    "article_placeholder_s1_bullet_3": "A glossary of the terms used throughout the app",
+    "article_placeholder_s1_heading": "What will go here",
+    "article_placeholder_s2_heading": "How this page is built",
+    "article_placeholder_s2_note": "Notes like this one highlight a condition or caveat that is easy to miss.",
+    "article_placeholder_s2_step_1": "Numbered lists are used where the order itself matters.",
+    "article_placeholder_s2_step_2": "Sources are shown beneath the claims they support.",
+    "article_placeholder_s2_step_3": "Every line here is a translatable resource, so guides can be read in any supported language.",
+    "article_placeholder_source_1": "No sources yet — this page is a placeholder",
+    "article_placeholder_summary": "How the reference guides will work",
+    "article_placeholder_title": "About this section"
+  },
+  "plurals": {},
+  "arrays": {}
+}

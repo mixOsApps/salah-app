@@ -1,0 +1,1379 @@
+{
+  "title": {
+    "type": "plain",
+    "key": "glossary_title",
+    "args": []
+  },
+  "summary": {
+    "type": "plain",
+    "key": "glossary_summary",
+    "args": []
+  },
+  "intro": {
+    "type": "plain",
+    "key": "glossary_intro",
+    "args": []
+  },
+  "unreviewed": {
+    "type": "plain",
+    "key": "glossary_unreviewed",
+    "args": []
+  },
+  "sources": [
+    {
+      "label": {
+        "type": "plain",
+        "key": "glossary_src_reliance",
+        "args": []
+      },
+      "url": null
+    },
+    {
+      "label": {
+        "type": "plain",
+        "key": "glossary_src_nur",
+        "args": []
+      },
+      "url": null
+    },
+    {
+      "label": {
+        "type": "plain",
+        "key": "glossary_src_risala",
+        "args": []
+      },
+      "url": null
+    },
+    {
+      "label": {
+        "type": "plain",
+        "key": "glossary_src_umdah",
+        "args": []
+      },
+      "url": null
+    },
+    {
+      "label": {
+        "type": "plain",
+        "key": "glossary_editions",
+        "args": []
+      },
+      "url": null
+    }
+  ],
+  "entries": [
+    {
+      "id": "salah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_salah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_salah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_salah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fard",
+        "rakaah",
+        "dua",
+        "qibla"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_salah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "rakaah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_rakaah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_rakaah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_rakaah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "ruku",
+        "sujood",
+        "itidal",
+        "tashahhud"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_rakaah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "niyyah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_niyyah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_niyyah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_niyyah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "takbir",
+        "wudu",
+        "salah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_niyyah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "qibla",
+      "term": {
+        "type": "plain",
+        "key": "glossary_qibla_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_qibla_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_qibla_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "salah",
+        "niyyah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_qibla_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "fard",
+      "term": {
+        "type": "plain",
+        "key": "glossary_fard_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_fard_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_fard_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "wajib",
+        "sunnah",
+        "nafl"
+      ],
+      "schoolNotes": {
+        "type": "schoolComparison",
+        "subject": {
+          "type": "plain",
+          "key": "glossary_fard_notes_subject",
+          "args": []
+        },
+        "positions": [
+          {
+            "schools": [
+              "HANAFI"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_fard_n1",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_fard_n1_src",
+                "args": []
+              },
+              "url": null
+            }
+          },
+          {
+            "schools": [
+              "SHAFII"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_fard_n2",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_fard_n2_src",
+                "args": []
+              },
+              "url": null
+            }
+          },
+          {
+            "schools": [
+              "MALIKI"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_fard_n3",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_fard_n3_src",
+                "args": []
+              },
+              "url": null
+            }
+          },
+          {
+            "schools": [
+              "HANBALI"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_fard_n4",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_fard_n4_src",
+                "args": []
+              },
+              "url": null
+            }
+          }
+        ]
+      },
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_fard_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "wajib",
+      "term": {
+        "type": "plain",
+        "key": "glossary_wajib_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_wajib_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_wajib_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fard",
+        "sunnah",
+        "witr"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_wajib_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "sunnah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_sunnah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_sunnah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_sunnah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fard",
+        "wajib",
+        "nafl"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_sunnah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "nafl",
+      "term": {
+        "type": "plain",
+        "key": "glossary_nafl_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_nafl_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_nafl_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fard",
+        "sunnah",
+        "witr",
+        "tahajjud"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_nafl_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "adhan",
+      "term": {
+        "type": "plain",
+        "key": "glossary_adhan_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_adhan_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_adhan_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "jamaah",
+        "salah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_adhan_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "jamaah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_jamaah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_jamaah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_jamaah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "imam",
+        "adhan"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_jamaah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "imam",
+      "term": {
+        "type": "plain",
+        "key": "glossary_imam_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_imam_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_imam_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "jamaah",
+        "sahw"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_imam_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "takbir",
+      "term": {
+        "type": "plain",
+        "key": "glossary_takbir_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_takbir_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_takbir_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "niyyah",
+        "ruku",
+        "sujood",
+        "dhikr"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_takbir_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "taawwudh",
+      "term": {
+        "type": "plain",
+        "key": "glossary_taawwudh_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_taawwudh_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_taawwudh_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fatiha",
+        "dhikr"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_taawwudh_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "fatiha",
+      "term": {
+        "type": "plain",
+        "key": "glossary_fatiha_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_fatiha_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_fatiha_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "surah",
+        "sahw",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_fatiha_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "surah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_surah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_surah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_surah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fatiha",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_surah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "ruku",
+      "term": {
+        "type": "plain",
+        "key": "glossary_ruku_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_ruku_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_ruku_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "itidal",
+        "sujood",
+        "tasbih",
+        "sahw"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_ruku_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "itidal",
+      "term": {
+        "type": "plain",
+        "key": "glossary_itidal_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_itidal_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_itidal_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "ruku",
+        "sujood",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_itidal_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "sujood",
+      "term": {
+        "type": "plain",
+        "key": "glossary_sujood_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_sujood_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_sujood_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "ruku",
+        "sahw",
+        "tasbih",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_sujood_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "tashahhud",
+      "term": {
+        "type": "plain",
+        "key": "glossary_tashahhud_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_tashahhud_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_tashahhud_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "salawat",
+        "salam",
+        "sahw",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_tashahhud_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "salawat",
+      "term": {
+        "type": "plain",
+        "key": "glossary_salawat_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_salawat_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_salawat_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "tashahhud",
+        "salam",
+        "sahw"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_salawat_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "salam",
+      "term": {
+        "type": "plain",
+        "key": "glossary_salam_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_salam_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_salam_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "tashahhud",
+        "salawat",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_salam_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "dhikr",
+      "term": {
+        "type": "plain",
+        "key": "glossary_dhikr_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_dhikr_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_dhikr_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "tasbih",
+        "dua",
+        "salawat",
+        "taawwudh"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_dhikr_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "tasbih",
+      "term": {
+        "type": "plain",
+        "key": "glossary_tasbih_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_tasbih_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_tasbih_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "dhikr",
+        "ruku",
+        "sujood",
+        "takbir",
+        "tahmid"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_tasbih_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "tahmid",
+      "term": {
+        "type": "plain",
+        "key": "glossary_tahmid_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_tahmid_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_tahmid_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "tasbih",
+        "takbir",
+        "dhikr",
+        "itidal"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_tahmid_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "dua",
+      "term": {
+        "type": "plain",
+        "key": "glossary_dua_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_dua_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_dua_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "dhikr",
+        "salah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_dua_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "sahw",
+      "term": {
+        "type": "plain",
+        "key": "glossary_sahw_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_sahw_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_sahw_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "sujood",
+        "tashahhud",
+        "rakaah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_sahw_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "witr",
+      "term": {
+        "type": "plain",
+        "key": "glossary_witr_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_witr_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_witr_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "tahajjud",
+        "nafl",
+        "wajib"
+      ],
+      "schoolNotes": {
+        "type": "schoolComparison",
+        "subject": {
+          "type": "plain",
+          "key": "glossary_witr_notes_subject",
+          "args": []
+        },
+        "positions": [
+          {
+            "schools": [
+              "HANAFI"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_witr_n1",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_witr_n1_src",
+                "args": []
+              },
+              "url": null
+            }
+          },
+          {
+            "schools": [
+              "SHAFII"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_witr_n2",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_witr_n2_src",
+                "args": []
+              },
+              "url": null
+            }
+          },
+          {
+            "schools": [
+              "MALIKI"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_witr_n3",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_witr_n3_src",
+                "args": []
+              },
+              "url": null
+            }
+          },
+          {
+            "schools": [
+              "HANBALI"
+            ],
+            "text": {
+              "type": "plain",
+              "key": "glossary_witr_n4",
+              "args": []
+            },
+            "citation": {
+              "label": {
+                "type": "plain",
+                "key": "glossary_witr_n4_src",
+                "args": []
+              },
+              "url": null
+            }
+          }
+        ]
+      },
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_witr_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "tahajjud",
+      "term": {
+        "type": "plain",
+        "key": "glossary_tahajjud_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_tahajjud_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_tahajjud_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "witr",
+        "nafl",
+        "dhikr"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_tahajjud_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "wudu",
+      "term": {
+        "type": "plain",
+        "key": "glossary_wudu_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_wudu_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_wudu_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "ghusl",
+        "tayammum",
+        "niyyah",
+        "tartib"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_wudu_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "ghusl",
+      "term": {
+        "type": "plain",
+        "key": "glossary_ghusl_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_ghusl_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_ghusl_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "wudu",
+        "tayammum"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_ghusl_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "tayammum",
+      "term": {
+        "type": "plain",
+        "key": "glossary_tayammum_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_tayammum_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_tayammum_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "wudu",
+        "ghusl"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_tayammum_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "awrah",
+      "term": {
+        "type": "plain",
+        "key": "glossary_awrah_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_awrah_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_awrah_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "salah",
+        "wudu"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_awrah_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "tartib",
+      "term": {
+        "type": "plain",
+        "key": "glossary_tartib_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_tartib_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_tartib_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "wudu",
+        "niyyah",
+        "muwalat"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_tartib_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "muwalat",
+      "term": {
+        "type": "plain",
+        "key": "glossary_muwalat_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_muwalat_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_muwalat_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "wudu",
+        "tartib"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_muwalat_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "madhab",
+      "term": {
+        "type": "plain",
+        "key": "glossary_madhab_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_madhab_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_madhab_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fard",
+        "sunnah"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_madhab_src",
+          "args": []
+        },
+        "url": null
+      }
+    },
+    {
+      "id": "qada",
+      "term": {
+        "type": "plain",
+        "key": "glossary_qada_term",
+        "args": []
+      },
+      "definition": {
+        "type": "plain",
+        "key": "glossary_qada_def",
+        "args": []
+      },
+      "alsoKnownAs": {
+        "type": "plain",
+        "key": "glossary_qada_aka",
+        "args": []
+      },
+      "seeAlso": [
+        "fard",
+        "sahw"
+      ],
+      "schoolNotes": null,
+      "citation": {
+        "label": {
+          "type": "plain",
+          "key": "glossary_qada_src",
+          "args": []
+        },
+        "url": null
+      }
+    }
+  ]
+}
