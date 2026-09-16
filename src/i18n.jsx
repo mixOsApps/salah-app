@@ -57,13 +57,15 @@ function setStoredLocale(tag) {
 async function loadLocaleData(tag) {
   const strings = {};
   const plurals = {};
+  const arrays = {};
   for (const file of STRING_FILES) {
     const loader = stringModules[`./generated/strings/${tag}/${file}.json`];
     const mod = await loader();
     Object.assign(strings, mod.default.strings);
     Object.assign(plurals, mod.default.plurals);
+    Object.assign(arrays, mod.default.arrays);
   }
-  return { strings, plurals };
+  return { strings, plurals, arrays };
 }
 
 function missing(key) {
@@ -158,11 +160,12 @@ export function I18nProvider({ children }) {
 
   const resolve = useCallback((entry) => (data ? resolveText(entry, data, locale) : ""), [data, locale]);
   const t = useCallback((key, ...args) => resolve({ type: "plain", key, args }), [resolve]);
+  const tArray = useCallback((key) => (data ? data.arrays[key] ?? [] : []), [data]);
   const languages = useMemo(() => describeLanguages(LOCALE_TAGS, locale), [locale]);
 
   const value = useMemo(
-    () => ({ locale, setLocale, t, resolveText: resolve, languages, ready: !!data }),
-    [locale, setLocale, t, resolve, languages, data]
+    () => ({ locale, setLocale, t, tArray, resolveText: resolve, languages, ready: !!data }),
+    [locale, setLocale, t, tArray, resolve, languages, data]
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;

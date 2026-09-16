@@ -1,4 +1,5 @@
 import { ThemeProvider } from "./src/theme";
+import { SettingsProvider, useSettings } from "./src/settings";
 import { I18nProvider, useI18n } from "./src/i18n";
 import { useHashRoute, navigate } from "./src/useHashRoute";
 import HomeScreen from "./src/screens/HomeScreen";
@@ -15,6 +16,7 @@ import aboutData from "./src/generated/about.json";
 function AppShell() {
   const route = useHashRoute();
   const { ready } = useI18n();
+  const { readerSchool } = useSettings();
 
   if (!ready) return null;
 
@@ -27,13 +29,13 @@ function AppShell() {
   }
 
   if (route.screen === "glossary") {
-    return <GlossaryScreen glossary={glossaryData} onBack={() => navigate("/")} />;
+    return <GlossaryScreen glossary={glossaryData} readerSchool={readerSchool} onBack={() => navigate("/")} />;
   }
 
   if (route.screen === "article") {
     const article = articlesData.articles.find((a) => a.id === route.id);
     if (article) {
-      return <ArticleScreen article={article} onBack={() => navigate("/")} />;
+      return <ArticleScreen article={article} readerSchool={readerSchool} onBack={() => navigate("/")} />;
     }
   }
 
@@ -60,9 +62,11 @@ function AppShell() {
 export default function SalahApp() {
   return (
     <ThemeProvider>
-      <I18nProvider>
-        <AppShell />
-      </I18nProvider>
+      <SettingsProvider>
+        <I18nProvider>
+          <AppShell />
+        </I18nProvider>
+      </SettingsProvider>
     </ThemeProvider>
   );
 }

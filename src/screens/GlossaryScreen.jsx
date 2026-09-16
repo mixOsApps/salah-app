@@ -3,14 +3,11 @@ import { useI18n } from "../i18n";
 import { CitationView, SchoolComparisonCard, SourcesSection } from "../components/ArticleBlocks";
 import { glossaryOrder, glossaryEntryMatches } from "../glossarySort";
 
-// See ArticleScreen.jsx: always null until W6 gives the web a madhab setting.
-const readerSchool = null;
-
 function entryDomId(id) {
   return `glossary-entry-${id}`;
 }
 
-export default function GlossaryScreen({ glossary, onBack }) {
+export default function GlossaryScreen({ glossary, readerSchool, onBack }) {
   const { t, resolveText, locale } = useI18n();
   const [query, setQuery] = useState("");
 

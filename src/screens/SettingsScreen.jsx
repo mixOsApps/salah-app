@@ -1,9 +1,13 @@
 import { useI18n } from "../i18n";
 import { useTheme, THEME_CHOICES } from "../theme";
+import { useSettings } from "../settings";
 
 export default function SettingsScreen({ onAboutClick, onBack }) {
-  const { t, locale, setLocale, languages } = useI18n();
+  const { t, tArray, locale, setLocale, languages } = useI18n();
   const { choice, setChoice } = useTheme();
+  const { calculationMethod, setCalculationMethod, madhab, setMadhab } = useSettings();
+  const calculationMethods = tArray("calculation_methods");
+  const madhabOptions = tArray("madhab_options");
 
   return (
     <div className="salah-screen salah-screen--settings">
@@ -25,6 +29,37 @@ export default function SettingsScreen({ onAboutClick, onBack }) {
                 aria-pressed={value === choice}
               >
                 {t(value)}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="salah-settings-section">
+          <h2 className="salah-settings-section-title">{t("calculation_method")}</h2>
+          <select
+            className="salah-select"
+            value={calculationMethod}
+            onChange={(e) => setCalculationMethod(Number(e.target.value))}
+          >
+            {calculationMethods.map((label, index) => (
+              <option key={index} value={index}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </section>
+
+        <section className="salah-settings-section">
+          <h2 className="salah-settings-section-title">{t("madhab")}</h2>
+          <div className="salah-madhab-row">
+            {madhabOptions.map((label, index) => (
+              <button
+                key={index}
+                className={"salah-madhab-option" + (index === madhab ? " is-selected" : "")}
+                onClick={() => setMadhab(index)}
+                aria-pressed={index === madhab}
+              >
+                {label}
               </button>
             ))}
           </div>
