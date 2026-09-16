@@ -172,6 +172,64 @@ body {
   line-height: 1.6;
 }
 
+/* Replaces .salah-home-sub once prayer times are available -- HomeScreen.kt's PrayerTimesRow.
+   flex-wrap, not a plain row: at large font scales the five entries stop fitting across the
+   screen, and a Row has nowhere to put the overflow (see rememberCompactTimeFormatter's comment
+   on the same layout constraint). */
+.salah-prayer-times-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 12px;
+  padding-inline: 16px;
+}
+
+.salah-prayer-time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.salah-prayer-time-name {
+  font-size: 10px;
+  color: var(--salah-text-secondary);
+  white-space: nowrap;
+}
+
+.salah-prayer-time-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--salah-gold);
+  white-space: nowrap;
+}
+
+.salah-location-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.salah-location-status {
+  font-size: 12px;
+  color: var(--salah-text-secondary);
+  text-align: center;
+  margin: 0 0 8px;
+  max-width: 260px;
+}
+
+.salah-location-btn {
+  background: color-mix(in srgb, var(--salah-gold) 15%, transparent);
+  color: var(--salah-gold);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
 .salah-prayer-grid {
   display: flex;
   flex-direction: column;
@@ -227,10 +285,26 @@ body {
   min-width: 0;
 }
 
+/* Name and time share a row (wrapping, not a hard line-break) the way HomeScreen.kt's FlowRow
+   does -- a Row alone left the time squeezed into whatever width remained, splitting values like
+   "3:54 AM" across lines at large font scales. */
+.salah-prayer-card-name-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .salah-prayer-card-name {
   font-size: 16px;
   font-weight: 700;
   color: var(--salah-text-primary);
+}
+
+.salah-prayer-card-time {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--salah-gold);
 }
 
 .salah-prayer-card-subtitle {
@@ -252,6 +326,48 @@ body {
      comment where it's set, in HomeScreen.jsx -- matches HomeScreen.kt's PrayerDescriptionPill,
      which colors its fill with the raw accentColor but its text with the re-toned accentText. */
   color: var(--prayer-accent-text);
+}
+
+/* HomeScreen.kt's QiyamCard: same shape as .salah-reference-card (icon, title/summary column)
+   plus a trailing time, but not a button -- Qiyam has no walkthrough of its own to open. */
+.salah-qiyam-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: 14px;
+  padding-inline: 16px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 14px;
+}
+
+.salah-qiyam-card-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.salah-qiyam-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.salah-qiyam-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+}
+
+.salah-qiyam-card-desc {
+  font-size: 11px;
+  color: var(--salah-text-secondary);
+  margin-top: 2px;
+}
+
+.salah-qiyam-card-time {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--salah-gold);
+  flex-shrink: 0;
 }
 
 .salah-footer {
@@ -895,16 +1011,21 @@ html[dir="rtl"] .salah-arrow {
   color: var(--salah-text-secondary);
 }
 
-/* Theme picker -- SettingsScreen.kt's SingleChoiceSegmentedButtonRow(System/Light/Dark). A row of
-   three equal pressable buttons rather than a literal connected segmented control, matching how
-   the language list already turns Android's dropdown into plain buttons -- consistent with this
-   screen's own established pattern, not the Material widget's specific chrome. */
-.salah-theme-row {
+/* Theme picker -- SettingsScreen.kt's SingleChoiceSegmentedButtonRow(System/Light/Dark) -- and
+   W6's madhab picker (also two/three equal options, same shape). Both are a row of equal
+   pressable buttons rather than a literal connected segmented control, matching how the language
+   list already turns Android's dropdown into plain buttons -- consistent with this screen's own
+   established pattern, not the Material widget's specific chrome. Kept as two class names (not
+   one shared one) so each section's markup stays self-descriptive; the rules are shared because
+   the shape genuinely is. */
+.salah-theme-row,
+.salah-madhab-row {
   display: flex;
   gap: 8px;
 }
 
-.salah-theme-option {
+.salah-theme-option,
+.salah-madhab-option {
   flex: 1;
   padding-block: 10px;
   padding-inline: 8px;
@@ -919,10 +1040,27 @@ html[dir="rtl"] .salah-arrow {
   color: var(--salah-text-primary);
 }
 
-.salah-theme-option.is-selected {
+.salah-theme-option.is-selected,
+.salah-madhab-option.is-selected {
   border-color: var(--salah-gold);
   background: color-mix(in srgb, var(--salah-gold) 18%, transparent);
   color: var(--salah-gold);
+}
+
+/* Calculation method picker -- a native <select> rather than a custom dropdown, styled to match
+   .salah-language-option's card look. SettingsScreen.kt uses an ExposedDropdownMenuBox; nine
+   options is plenty for a native control and needs no custom listbox/keyboard handling here. */
+.salah-select {
+  width: 100%;
+  padding-block: 12px;
+  padding-inline: 16px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 12px;
+  color: var(--salah-text-primary);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /* ------------------------------------------------------------

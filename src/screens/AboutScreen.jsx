@@ -2,9 +2,17 @@ import { useEffect, useState } from "react";
 import { useI18n } from "../i18n";
 import pdfUrl from "../generated/assets/salah-guide.pdf?url";
 
-// Mirrors AboutScreen.kt's feature list, minus two rows the web can't honestly claim yet:
-// Qibla is never ported (owner's call, WEB_TASK_PROMPTS.md), and prayer times land in W6.
-const FEATURE_KEYS = ["about_feature_steps", "about_feature_guides", "about_feature_schools", "about_feature_sources"];
+// Mirrors AboutScreen.kt's feature list, minus the one row the web still can't honestly claim:
+// Qibla is never ported (owner's call, WEB_TASK_PROMPTS.md). Prayer times (about_feature_times)
+// landed in W6, so -- unlike W5, when this list left that bullet out -- it's back in, in Android's
+// order.
+const FEATURE_KEYS = [
+  "about_feature_steps",
+  "about_feature_times",
+  "about_feature_guides",
+  "about_feature_schools",
+  "about_feature_sources",
+];
 
 export default function AboutScreen({ about, onBack }) {
   const { t } = useI18n();

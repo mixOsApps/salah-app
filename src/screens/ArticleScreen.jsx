@@ -1,11 +1,7 @@
 import { useI18n } from "../i18n";
 import { ArticleBlockView, SourcesSection } from "../components/ArticleBlocks";
 
-// readerSchool is always null here -- W6 is where the web gets a madhab setting to read it from.
-// Until then every school position shows with equal weight, same as Android when it can't tell.
-const readerSchool = null;
-
-export default function ArticleScreen({ article, onBack }) {
+export default function ArticleScreen({ article, readerSchool, onBack }) {
   const { t, resolveText } = useI18n();
 
   return (
