@@ -66,7 +66,8 @@ body {
 
 /* Home screen: a normal document-flow page. It grows with its content and
    the page scrolls — there's no fixed header/footer to protect here. */
-.salah-screen--home {
+.salah-screen--home,
+.salah-screen--settings {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -112,9 +113,27 @@ body {
   opacity: 0.9;
 }
 
-.salah-header-glyph {
-  font-size: 44px;
+.salah-header-logo {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
   margin-block-end: 12px;
+}
+
+/* Settings entry point -- top end (right in LTR, left in RTL) of the home header, which is
+   already `position: relative` for exactly this kind of overlay. */
+.salah-settings-gear {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 16px;
+  background: none;
+  border: none;
+  color: var(--salah-gold);
+  font-size: 22px;
+  line-height: 1;
+  padding: 10px;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .salah-home-title {
@@ -232,6 +251,9 @@ body {
 }
 
 .salah-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: none;
   border: none;
   color: var(--salah-accent);
@@ -241,6 +263,18 @@ body {
   padding-block: 4px;
   padding-inline: 0;
   font: inherit;
+}
+
+/* Direction-mirrored glyphs: these arrow characters stand in for Android's AutoMirrored icons
+   (back/previous/next), so they must flip under RTL the same way those icons do. This is NOT for
+   arrows that are already baked into a translated string (e.g. the salam badge's "look_right" /
+   "look_left") -- those come pre-composed from the export and must be rendered exactly as given. */
+.salah-arrow {
+  display: inline-block;
+}
+
+html[dir="rtl"] .salah-arrow {
+  transform: scaleX(-1);
 }
 
 .salah-topbar-title {
@@ -321,6 +355,18 @@ body {
   justify-content: center;
   overflow: hidden;
   padding: 16px;
+}
+
+/* The illustration is a tap target (opens the fullscreen view), so it's a <button> under the
+   hood; this resets the parts of the UA button style that .salah-illust-wrap doesn't already
+   override. */
+.salah-illust-button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .salah-pose-img {
@@ -500,11 +546,13 @@ body {
   text-align: left;
 }
 
-.salah-tagalog-text {
+.salah-translation-text {
   font-size: 13.5px;
   line-height: 1.75;
   /* W1-1: this was a second hardcoded muted blue-grey — see the comment on
-     .salah-translit-text just above; same fix, same Android source. */
+     .salah-translit-text just above; same fix, same Android source. Renamed from
+     .salah-tagalog-text in W3b: this card now renders whichever of the three languages is
+     active, not just Tagalog. */
   color: var(--salah-text-primary);
   white-space: pre-line;
   text-align: start;
@@ -555,6 +603,10 @@ body {
 }
 
 .salah-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   flex: 1;
   padding: 13px;
   border-radius: 12px;
@@ -603,6 +655,142 @@ body {
   opacity: 0.4;
 }
 
+/* ------------------------------------------------------------
+   Step screen — fullscreen expanded-image overlay (isImageExpanded on Android). White-on-black
+   here, not a token: like the salam badge and the illustration's gradient above, this scrim
+   reads the same regardless of theme.
+   ------------------------------------------------------------ */
+.salah-image-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+  border: none;
+}
+
+.salah-image-overlay-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(90vw, 480px);
+  max-height: 90vh;
+}
+
+.salah-image-overlay-img {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.salah-image-overlay-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin: 16px 0 4px;
+}
+
+.salah-image-overlay-pose {
+  color: var(--prayer-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.salah-image-overlay-close {
+  position: absolute;
+  top: 40px;
+  inset-inline-end: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: color-mix(in srgb, white 10%, transparent);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------
+   Settings screen
+   ------------------------------------------------------------ */
+.salah-settings-topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: 14px 10px;
+  padding-inline: 16px;
+  border-block-end: 1px solid color-mix(in srgb, var(--salah-text-primary) 5%, transparent);
+}
+
+.salah-settings-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+}
+
+.salah-settings-body {
+  padding-block: 20px;
+  padding-inline: 18px;
+  flex: 1;
+}
+
+.salah-settings-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--salah-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.salah-language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.salah-language-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: start;
+  width: 100%;
+  font: inherit;
+  color: var(--salah-text-primary);
+}
+
+.salah-language-option.is-selected {
+  border-color: var(--salah-gold);
+  background: color-mix(in srgb, var(--salah-gold) 12%, transparent);
+}
+
+.salah-language-endonym {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+}
+
+.salah-language-exonym {
+  font-size: 12px;
+  color: var(--salah-text-secondary);
+}
+
 /* ============================================================
    Tablet — single column, capped and centred (not full-bleed).
    Applies to both screens; the laptop/desktop block below overrides the
@@ -610,7 +798,8 @@ body {
    ============================================================ */
 @media (min-width: 600px) {
   .salah-screen--home,
-  .salah-screen--step {
+  .salah-screen--step,
+  .salah-screen--settings {
     max-width: 620px;
     margin-inline: auto;
   }
@@ -735,7 +924,7 @@ body {
      19px/2.1 line-height and Arabic diacritics need that leading; scaling
      it further stops being comfortable. */
   .salah-translit-text,
-  .salah-tagalog-text {
+  .salah-translation-text {
     font-size: clamp(14px, 0.25vw + 13.5px, 15.5px);
   }
 
