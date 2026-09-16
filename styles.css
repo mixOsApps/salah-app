@@ -1201,8 +1201,41 @@ html[dir="rtl"] .salah-arrow {
   }
 
   .salah-prayer-card {
-    padding-block: 18px;
-    padding-inline: 20px;
+    gap: 18px;
+    padding-block: 24px;
+    padding-inline: 24px;
+  }
+
+  .salah-prayer-card-icon {
+    width: 52px;
+    height: 52px;
+    font-size: clamp(24px, 1vw + 20px, 30px);
+  }
+
+  .salah-prayer-card-name {
+    font-size: clamp(17px, 0.4vw + 16px, 20px);
+  }
+
+  .salah-prayer-card-subtitle {
+    font-size: clamp(12.5px, 0.2vw + 12px, 14px);
+  }
+
+  .salah-prayer-card-badge {
+    font-size: clamp(11px, 0.15vw + 10px, 13px);
+    padding: 6px 14px;
+  }
+
+  /* ---- Home / "Learn more": small tiles below the prayer grid, not a full-width stacked
+     list. Same minmax(280px,1fr) module as .salah-prayer-grid on purpose, so the two grids
+     land on the same column count (2 at ~1024px, 3 at ~1440px) and read as one system. */
+  .salah-reference-section {
+    padding-inline: 80px;
+  }
+
+  .salah-reference-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
   }
 
   /* ---- Step screen: two columns ---- */
