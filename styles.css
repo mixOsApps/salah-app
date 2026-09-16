@@ -1198,6 +1198,21 @@ html[dir="rtl"] .salah-arrow {
        a narrower gutter lets a 3rd column fit at 1024px too. */
     padding-inline: 80px;
     padding-block: 32px;
+    /* The mobile rule's `flex: 1` (it grows to fill .salah-screen--home's
+       min-height:100vh flex column, so a short prayer list doesn't leave the
+       footer stranded partway down a tall phone screen) doesn't go away just
+       because `display` switched to grid here -- it's a flex-item property
+       of this element within its parent, independent of how this element
+       lays out its own children. Left unset, the grid stays a flex-grow
+       child too, and CSS Grid's `align-content: normal` stretches the auto
+       row tracks to fill that grown space -- on a viewport much taller than
+       the card content (a phone's "Desktop site" mode, which fakes a
+       1024px+ width but keeps the phone's full portrait CSS height), that
+       inflated every card to 400+px tall with a huge gap before "Learn
+       more". `flex: none` lets the grid size to its own content instead, as
+       intended once it's arranging cards in columns rather than a single
+       mobile stack. */
+    flex: none;
   }
 
   .salah-prayer-card {
