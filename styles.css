@@ -67,7 +67,8 @@ body {
 /* Home screen: a normal document-flow page. It grows with its content and
    the page scrolls — there's no fixed header/footer to protect here. */
 .salah-screen--home,
-.salah-screen--settings {
+.salah-screen--settings,
+.salah-screen--article {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -235,6 +236,68 @@ body {
   font-size: 11px;
   color: var(--salah-footer);
   margin: 0;
+}
+
+/* ------------------------------------------------------------
+   Home screen — "Learn more" (the four guides + the glossary)
+   ------------------------------------------------------------ */
+.salah-reference-section {
+  padding-inline: 18px;
+  padding-block: 4px 20px;
+}
+
+.salah-reference-section-title {
+  color: var(--salah-gold);
+  font-size: 13px;
+  font-weight: 700;
+  margin-block-end: 10px;
+}
+
+.salah-reference-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Deliberately plainer than .salah-prayer-card -- no accent colour, no badge pill -- so this
+   list reads as secondary to the prayers themselves, matching Android's ArticleCard doc. */
+.salah-reference-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: 14px;
+  padding-inline: 14px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 8%, transparent);
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: start;
+  width: 100%;
+  font: inherit;
+  color: var(--salah-text-primary);
+}
+
+.salah-reference-card-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.salah-reference-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.salah-reference-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--salah-text-primary);
+}
+
+.salah-reference-card-summary {
+  font-size: 12px;
+  color: var(--salah-text-secondary);
 }
 
 /* ------------------------------------------------------------
@@ -791,6 +854,302 @@ html[dir="rtl"] .salah-arrow {
   color: var(--salah-text-secondary);
 }
 
+/* ------------------------------------------------------------
+   Article / Glossary screens — shared blocks (ArticleBlockView, SchoolComparisonCard, NoteCard,
+   CitationView, SourcesSection in src/components/ArticleBlocks.jsx). Reuses
+   .salah-settings-topbar/.salah-settings-title for the header.
+   ------------------------------------------------------------ */
+.salah-article-body {
+  padding-block: 20px 32px;
+  padding-inline: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.salah-article-intro {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--salah-text-primary);
+}
+
+.salah-article-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.salah-article-section-heading {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--salah-gold);
+}
+
+.salah-block-body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--salah-text-primary);
+}
+
+.salah-block-list {
+  margin: 0;
+  padding-inline-start: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--salah-text-primary);
+}
+
+.salah-block-list li::marker {
+  color: var(--salah-gold);
+  font-weight: 700;
+}
+
+.salah-block-step {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.salah-block-step-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.salah-block-step-number {
+  color: var(--salah-gold);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.salah-block-step-title {
+  flex: 1;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--salah-text-primary);
+}
+
+.salah-block-step-detail {
+  margin: 0;
+  padding-inline-start: 24px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--salah-text-primary);
+}
+
+.salah-block-step-citation {
+  padding-inline-start: 24px;
+}
+
+.salah-note-card {
+  background: color-mix(in srgb, var(--salah-gold) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--salah-gold) 35%, transparent);
+  border-radius: 12px;
+  padding-block: 12px;
+  padding-inline: 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--salah-text-primary);
+}
+
+.salah-citation {
+  font-size: 12px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--salah-text-secondary);
+}
+
+.salah-school-card {
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 16%, transparent);
+  border-radius: 12px;
+  padding-block: 12px;
+  padding-inline: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.salah-school-card-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--salah-text-secondary);
+}
+
+.salah-school-card-subject {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--salah-text-primary);
+}
+
+.salah-school-position {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.salah-school-position-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.salah-school-position-names {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--salah-text-secondary);
+}
+
+.salah-school-position-names.is-reader {
+  color: var(--salah-gold);
+}
+
+.salah-school-position-badge {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--salah-gold);
+}
+
+.salah-school-position-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--salah-text-primary);
+}
+
+.salah-divider {
+  border: none;
+  border-block-start: 1px solid color-mix(in srgb, var(--salah-text-primary) 16%, transparent);
+  margin: 0;
+}
+
+.salah-sources-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-block-start: 4px;
+}
+
+.salah-sources-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--salah-text-secondary);
+}
+
+/* ------------------------------------------------------------
+   Glossary screen
+   ------------------------------------------------------------ */
+.salah-glossary-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--salah-card);
+  border: 1px solid color-mix(in srgb, var(--salah-text-primary) 20%, transparent);
+  border-radius: 10px;
+  padding-block: 10px;
+  padding-inline: 12px;
+}
+
+.salah-glossary-search:focus-within {
+  border-color: var(--salah-gold);
+}
+
+.salah-glossary-search-icon {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.salah-glossary-search-input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--salah-text-primary);
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.salah-glossary-search-input::placeholder {
+  color: color-mix(in srgb, var(--salah-text-primary) 55%, transparent);
+}
+
+.salah-glossary-search-clear {
+  background: none;
+  border: none;
+  color: var(--salah-text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px;
+  line-height: 1;
+}
+
+.salah-glossary-empty {
+  font-size: 14px;
+  color: var(--salah-text-secondary);
+}
+
+.salah-glossary-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-block: 14px;
+  border-block-end: 1px solid color-mix(in srgb, var(--salah-text-primary) 10%, transparent);
+  scroll-margin-top: 16px;
+}
+
+.salah-glossary-term {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--salah-gold);
+}
+
+.salah-glossary-aka {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--salah-text-secondary);
+}
+
+.salah-glossary-definition {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--salah-text-primary);
+}
+
+.salah-see-also {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.salah-see-also-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--salah-text-secondary);
+}
+
+.salah-see-also-chip {
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--salah-accent) 45%, transparent);
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--salah-accent);
+  cursor: pointer;
+  font-family: inherit;
+}
+
 /* ============================================================
    Tablet — single column, capped and centred (not full-bleed).
    Applies to both screens; the laptop/desktop block below overrides the
@@ -799,7 +1158,8 @@ html[dir="rtl"] .salah-arrow {
 @media (min-width: 600px) {
   .salah-screen--home,
   .salah-screen--step,
-  .salah-screen--settings {
+  .salah-screen--settings,
+  .salah-screen--article {
     max-width: 620px;
     margin-inline: auto;
   }
